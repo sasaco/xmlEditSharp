@@ -23,7 +23,11 @@ namespace WindowsFormsApp1
             var xmlDoc = new XmlDocument();
             xmlDoc.Load(@"data/master.xml");
 
-            editor_001.Edit(xmlDoc, 32.0);
+            editor_001.Edit(xmlDoc, 10.0);  // 堤体延長変更
+            editor_002.Edit(xmlDoc, 5.5);   // 堤体幅変更
+
+
+
         }
     }
 }

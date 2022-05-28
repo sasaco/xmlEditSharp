@@ -7,8 +7,22 @@ using System.Xml;
 
 namespace WindowsFormsApp1
 {
-    static class editor_001
+    /*
+    <Project>
+        <Products>
+            <WShut3>
+                <DrawingCreationData>
+                    <InputData>
+                        <Shape_Plane>
+                            <PlaneUnit>
+                                <Index No="0">
+                                    <Width>
+    */
+
+    static public class editor_001
     {
+
+
         /// <summary>
         /// 堤体の延長を変更する
         /// </summary>
@@ -16,16 +30,22 @@ namespace WindowsFormsApp1
         /// <param name="value">新しい値</param>
         static public void Edit(XmlDocument xmlDoc, double value )
         {
-            var CofferdamLength = xmlDoc.GetElementsByTagName("CofferdamLength");
+            XmlElement root = xmlDoc.DocumentElement;
 
-            var PlaneUnit = xmlDoc.GetElementsByTagName("PlaneUnit");
-            var Width = xmlDoc.GetElementsByTagName("Width");
+            var Products = helper.getXmlElement(root, "Products");
+            var WShut3 = helper.getXmlElement(Products, "WShut3");
+            var DrawingCreationData = helper.getXmlElement(WShut3, "DrawingCreationData");
+            var InputData = helper.getXmlElement(DrawingCreationData, "InputData");
+            var Shape_Plane = helper.getXmlElement(InputData, "Shape_Plane");
+            var PlaneUnit = helper.getXmlElement(Shape_Plane, "PlaneUnit");
+            var Index = helper.getXmlElement(PlaneUnit, "Index");
+            var Width = helper.getXmlElement(Index, "Width");
 
-            //var CofferdamLength1 = xmlDoc.SelectSingleNode("CofferdamLength");
-            //var CofferdamLength2 = xmlDoc.SelectNodes("CofferdamLength");
-            //var PlaneUnit = xmlDoc.SelectNodes("PlaneUnit");
-            //var Width = PlaneUnit.SelectNodes("//Width");
+            Width.InnerText = value.ToString();
 
         }
+
+
+
     }
 }
