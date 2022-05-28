@@ -31,6 +31,8 @@ namespace WindowsFormsApp1
             //editor_010.Edit(xmlDoc, 0.9);
             //editor_011.Edit(xmlDoc, 0.9);
             editor_012.Edit(xmlDoc, 4);
+            editor_013.Edit(xmlDoc,);
+            editor_014.Edit(xmlDoc, 4);
 
         }
     }

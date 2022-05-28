@@ -47,6 +47,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="editor_class\010_引張材平面配置_標準ピッチ上段変更.cs" />
+    <Compile Include="editor_class\014_地層データ_堤体区間_地表面高変更.cs" />
+    <Compile Include="editor_class\013_地層データ_堤外区間_土パラメータ変更.cs" />
     <Compile Include="editor_class\012_地層データ_堤外区間_地表面高変更.cs" />
     <Compile Include="editor_class\011_引張材平面配置_標準ピッチ下段変更.cs" />
     <Compile Include="editor_class\005_中詰土天端高変更.cs" />
