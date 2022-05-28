@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="editor_class\010_引張材平面配置_標準ピッチ上段変更.cs" />
+    <Compile Include="editor_class\012_地層データ_堤外区間_地表面高変更.cs" />
+    <Compile Include="editor_class\011_引張材平面配置_標準ピッチ下段変更.cs" />
+    <Compile Include="editor_class\005_中詰土天端高変更.cs" />
+    <Compile Include="editor_class\004_堤外側矢板天端高変更.cs" />
+    <Compile Include="editor_class\003_堤内側矢板天端高変更.cs" />
     <Compile Include="editor_class\001_堤体延長変更.cs" />
     <Compile Include="editor_class\002_堤体幅変更.cs" />
     <Compile Include="editor_class\editor_helper.cs" />
