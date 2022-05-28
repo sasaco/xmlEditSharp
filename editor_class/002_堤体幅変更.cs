@@ -32,7 +32,7 @@ namespace WindowsFormsApp1
     static public class editor_002
     {
         /// <summary>
-        /// 堤体の延長を変更する
+        /// 堤体幅変更
         /// </summary>
         /// <param name="xmlDoc">変更する対象</param>
         /// <param name="value">新しい値</param>

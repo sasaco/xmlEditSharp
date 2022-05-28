@@ -9,8 +9,11 @@ namespace WindowsFormsApp1
 {
     static public class helper
     {
-        static public XmlElement getXmlElement(XmlElement target, string key)
+        static public XmlElement getXmlElement(XmlElement target, string key, int index = 0)
         {
+            int i = 0;
+            int j;
+
             XmlElement result = null;
             foreach (var child in target.ChildNodes)
             {
@@ -18,7 +21,18 @@ namespace WindowsFormsApp1
                 if (node.Name == key)
                 {
                     result = node;
-                    break;
+
+                    if (int.TryParse(node.GetAttribute("No"), out j))
+                    {
+                        if (index == j)
+                            break;
+                    }
+                    else
+                    {
+                        if (index == i)
+                            break;
+                    }
+                    i++;
                 }
             }
             return result;
