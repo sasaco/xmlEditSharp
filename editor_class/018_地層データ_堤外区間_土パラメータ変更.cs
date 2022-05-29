@@ -34,7 +34,7 @@ namespace WindowsFormsApp1
         							    <WallFrictionAngle_Layer>
     */
 
-    static public class editor_013
+    static public class editor_018
     {
 
         /// </summary>
@@ -78,7 +78,7 @@ namespace WindowsFormsApp1
             var InputData = helper.getXmlElement(WShut3, "InputData");
             var WShutData = helper.getXmlElement(InputData, "WShutData");
             var StratumList = helper.getXmlElement(WShutData, "StratumList");
-            var Stratum = helper.getXmlElement(StratumList, "Stratum");
+            var Stratum = helper.getXmlElement(StratumList, "Stratum", 2); // 13とここが違う
             var LayerList = helper.getXmlElement(Stratum, "LayerList");
             var Layer = helper.getXmlElement(Stratum, "Layer");
 
