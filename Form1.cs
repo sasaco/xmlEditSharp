@@ -95,6 +95,9 @@ namespace WindowsFormsApp1
             //editor_031.Edit(xmlDoc, 5.00000000000000E-001);
             //editor_032.Edit(xmlDoc, 1.00000000000000E+000);
 
+            xmlDoc.Save(@"../../data/edited.xml");
+
+            MessageBox.Show("＼(^o^)／ｵﾜﾀ");
         }
     }
 }
