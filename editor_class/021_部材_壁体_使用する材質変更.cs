@@ -17,7 +17,7 @@ namespace WindowsFormsApp1
                             <SteelSheetPile>
                                 <SideList>
                                     <SteelSheetPileOneSide>
-                                        <UseSteelNo>
+                                        <UseMaterials>
 
     */
 
@@ -31,7 +31,7 @@ namespace WindowsFormsApp1
                             <SteelSheetPile>
                                 <SideList>
                                     <SteelSheetPileOneSide>
-                                        <UseSteelNo>
+                                        <UseMaterials>
      */
      
     /*
@@ -58,10 +58,10 @@ namespace WindowsFormsApp1
 
      */
 
-    static public class editor_020
+    static public class editor_021
     {
         /// <summary>
-        /// 部材壁体使用する鋼矢板の名称変更
+        /// 部材壁体根入れ照査時の地盤の評価変更.cs
         /// </summary>
         /// <param name="xmlDoc">変更する対象</param>
         /// <param name="value">新しい値</param>
@@ -74,13 +74,13 @@ namespace WindowsFormsApp1
             var InputData = helper.getXmlElement(WShut3, "InputData");
             var WShutData = helper.getXmlElement(InputData, "WShutData");
             var Wall = helper.getXmlElement(WShutData, "Wall");
-            var SteelSheetPile = helper.getXmlElement(Wall,"SteelSheetPile",1);
+            var SteelSheetPile = helper.getXmlElement(Wall, "SteelSheetPile",2);
 
             // 
 
             var SideList = helper.getXmlElement(SteelSheetPile, "SideList");
             var SteelSheetPileOneSide = helper.getXmlElement(SideList, "SteelSheetPileOneSide");
-            var InvalidLayerThickness = helper.getXmlElement(SteelSheetPile, "UseSteelNo");
+            var InvalidLayerThickness = helper.getXmlElement(SteelSheetPile, "UseMaterials");
             
 
             EmbedmentSoilValue.InnerText = value.ToString();
@@ -89,16 +89,16 @@ namespace WindowsFormsApp1
             // 
             var SideList = helper.getXmlElement(SteelSheetPile, "SideList");
             var SteelSheetPileOneSide = helper.getXmlElement(SideList, "SteelSheetPileOneSide",1);
-            var InvalidLayerThickness = helper.getXmlElement(SteelSheetPile, "UseSteelNo");
+            var InvalidLayerThickness = helper.getXmlElement(SteelSheetPile, "UseMaterials");
             
 
-            InvalidLayerThickness.InnerText = value.ToString();
+            InvalidLayerThickness.InnerText = value.ToString("E");
             
             // 
             var CorrosionExcvT2 = helper.getXmlElement(SteelSheetPile", "CorrosionExcvT2");
             
 
-            CorrosionExcvT2.InnerText = value.ToString("E");
+            CorrosionExcvT2.InnerText = value.ToString();
             
             // 
             var CorrosionBackT1 = helper.getXmlElement(SteelSheetPile", "CorrosionBackT1");
