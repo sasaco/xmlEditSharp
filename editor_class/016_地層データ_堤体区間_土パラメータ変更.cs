@@ -38,7 +38,7 @@ namespace WindowsFormsApp1
     {
 
         /// </summary>
-        /// <param name="xmlDoc">地層データ_堤外区間_土パラメータ変更</param>
+        /// <param name="xmlDoc">地層データ_堤体区間_土パラメータ変更</param>
         /// <param name="_Thickness">層厚</param>
         /// <param name="_SoilType">土質種類</param>
         /// <param name="_Nvalue">平均N値</param>
@@ -78,7 +78,7 @@ namespace WindowsFormsApp1
             var InputData = helper.getXmlElement(WShut3, "InputData");
             var WShutData = helper.getXmlElement(InputData, "WShutData");
             var StratumList = helper.getXmlElement(WShutData, "StratumList");
-            var Stratum = helper.getXmlElement(StratumList, "Stratum");
+            var Stratum = helper.getXmlElement(StratumList, "Stratum", 1); // 13とここが違う
             var LayerList = helper.getXmlElement(Stratum, "LayerList");
             var Layer = helper.getXmlElement(Stratum, "Layer");
 

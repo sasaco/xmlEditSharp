@@ -47,6 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="editor_class\010_引張材平面配置_標準ピッチ上段変更.cs" />
+    <Compile Include="editor_class\019_部材_壁体_鋼矢板の有効率変更.cs" />
+    <Compile Include="editor_class\018_地層データ_堤外区間_土パラメータ変更.cs" />
+    <Compile Include="editor_class\017_地層データ_堤内区間_地表面高変更.cs" />
+    <Compile Include="editor_class\016_地層データ_堤体区間_土パラメータ変更.cs" />
+    <Compile Include="editor_class\015_地層データ_堤体区間_中詰土パラメータ変更.cs" />
     <Compile Include="editor_class\014_地層データ_堤体区間_地表面高変更.cs" />
     <Compile Include="editor_class\013_地層データ_堤外区間_土パラメータ変更.cs" />
     <Compile Include="editor_class\012_地層データ_堤外区間_地表面高変更.cs" />
@@ -56,6 +61,19 @@
     <Compile Include="editor_class\003_堤内側矢板天端高変更.cs" />
     <Compile Include="editor_class\001_堤体延長変更.cs" />
     <Compile Include="editor_class\002_堤体幅変更.cs" />
+    <Compile Include="editor_class\020_部材_壁体_使用する鋼矢板の名称変更.cs" />
+    <Compile Include="editor_class\021_部材_壁体_使用する材質変更.cs" />
+    <Compile Include="editor_class\022_部材_壁体_根入れ照査時の地盤の評価変更.cs" />
+    <Compile Include="editor_class\023_部材_壁体_矢板前面の無効層厚変更.cs" />
+    <Compile Include="editor_class\024_部材_引張材_材料パラメータ上段変更.cs" />
+    <Compile Include="editor_class\025_部材_引張材_材料パラメータ下段変更.cs" />
+    <Compile Include="editor_class\026_検討ケース_常時_ケース名変更.cs" />
+    <Compile Include="editor_class\027_検討ケース_常時_水位条件変更.cs" />
+    <Compile Include="editor_class\028_検討ケース_常時_鉛直力の変更.cs" />
+    <Compile Include="editor_class\029_検討ケース_地震時_ケース名変更.cs" />
+    <Compile Include="editor_class\030_検討ケース_地震時_水位条件変更.cs" />
+    <Compile Include="editor_class\031_検討ケース_地震時_地震の条件変更.cs" />
+    <Compile Include="editor_class\032_検討ケース_地震時_鉛直力変更.cs" />
     <Compile Include="editor_class\editor_helper.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
