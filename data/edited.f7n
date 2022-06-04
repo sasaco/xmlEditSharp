@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<Project xmlns="http://www.forum8.co.jp/uc1xml/2003/Project/" FileGUID="{CA035FE1-D296-209E-A4B6-ADB760F961D9}">
+<Project xmlns="http://www.forum8.co.jp/uc1xml/2003/Project/" FileGUID="{907257D9-17CC-812D-55A5-23CAD25ADA51}">
   <Properties>
     <ProductName>二重締切工の設計・3DCAD Ver.4</ProductName>
     <ProductVersion>
@@ -114,24 +114,24 @@
               </Layer>
             </LayerList>
             <FillStruct>
-              <SoilType>_Sandy</SoilType>
-              <NValue>1.20000000000000E+001</NValue>
-              <WetUnitWeight>1.80000000000000E+001</WetUnitWeight>
-              <SubmegedUnitWeight>9.00000000000000E+000</SubmegedUnitWeight>
-              <SaturationUnitWeight>1.90000000000000E+001</SaturationUnitWeight>
-              <FrictionAngle>3.00000000000000E+001</FrictionAngle>
-              <Cohesion>0.00000000000000E+000</Cohesion>
-              <CohesionCoefficient>0.00000000000000E+000</CohesionCoefficient>
-              <ModulusOfDeformation>3.36000000000000E+004</ModulusOfDeformation>
-              <WallFrictionAngle>1.50000000000000E+001</WallFrictionAngle>
-              <WallFrictionAngle_Layer>0.00000000000000E+000</WallFrictionAngle_Layer>
+              <SoilType>_Clay</SoilType>
+              <NValue>1.000000E+000</NValue>
+              <WetUnitWeight>1.900000E+001</WetUnitWeight>
+              <SubmegedUnitWeight>9.000000E+000</SubmegedUnitWeight>
+              <SaturationUnitWeight>2.000000E+001</SaturationUnitWeight>
+              <FrictionAngle>2.800000E+001</FrictionAngle>
+              <Cohesion>8.210000E+002</Cohesion>
+              <CohesionCoefficient>0.000000E+000</CohesionCoefficient>
+              <ModulusOfDeformation>3.360000E+003</ModulusOfDeformation>
+              <WallFrictionAngle>1.500000E+001</WallFrictionAngle>
+              <WallFrictionAngle_Layer>0.000000E+000</WallFrictionAngle_Layer>
             </FillStruct>
             <EmbankmentGnm>1.80000000000000E+001</EmbankmentGnm>
             <EmbankmentGnmDash>9.00000000000000E+000</EmbankmentGnmDash>
           </Init>
           <Shape>
             <DamNum>1</DamNum>
-            <CofferdamLength>3.20000000000000E+001</CofferdamLength>
+            <CofferdamLength>2.500000E+001</CofferdamLength>
             <BodyDirection>_Vertical</BodyDirection>
             <BodyDataList>
               <BodyData>
@@ -140,14 +140,14 @@
                 <TierodDataList>
                   <TierodLayout>1</TierodLayout>
                   <TierodData>
-                    <NormalPitch>8.00000000000000E-001</NormalPitch>
+                    <NormalPitch>4.000000E+000</NormalPitch>
                     <LS>0.00000000000000E+000</LS>
                     <NumS>0</NumS>
                     <LE>0.00000000000000E+000</LE>
                     <NumE>0</NumE>
                   </TierodData>
                   <TierodData>
-                    <NormalPitch>8.00000000000000E-001</NormalPitch>
+                    <NormalPitch>8.000000E+000</NormalPitch>
                     <LS>0.00000000000000E+000</LS>
                     <NumS>0</NumS>
                     <LE>0.00000000000000E+000</LE>
@@ -157,9 +157,9 @@
               </BodyData>
             </BodyDataList>
             <CalBodyNum>1</CalBodyNum>
-            <WaterSideLevel>5.50000000000000E+000</WaterSideLevel>
-            <FillLevel>5.10000000000000E+000</FillLevel>
-            <LandSideLevel>5.50000000000000E+000</LandSideLevel>
+            <WaterSideLevel>7.000000E+000</WaterSideLevel>
+            <FillLevel>4.000000E+000</FillLevel>
+            <LandSideLevel>9.000000E+000</LandSideLevel>
             <SameTierodPitch>False</SameTierodPitch>
           </Shape>
           <Basic>
@@ -183,17 +183,17 @@
             <EndBearingCondition>_Free</EndBearingCondition>
             <CalcPitch>_1m</CalcPitch>
             <FillStruct>
-              <SoilType>_Sandy</SoilType>
-              <NValue>1.20000000000000E+001</NValue>
-              <WetUnitWeight>1.80000000000000E+001</WetUnitWeight>
-              <SubmegedUnitWeight>9.00000000000000E+000</SubmegedUnitWeight>
-              <SaturationUnitWeight>1.90000000000000E+001</SaturationUnitWeight>
-              <FrictionAngle>3.00000000000000E+001</FrictionAngle>
-              <Cohesion>0.00000000000000E+000</Cohesion>
-              <CohesionCoefficient>0.00000000000000E+000</CohesionCoefficient>
-              <ModulusOfDeformation>3.36000000000000E+004</ModulusOfDeformation>
-              <WallFrictionAngle>1.50000000000000E+001</WallFrictionAngle>
-              <WallFrictionAngle_Layer>0.00000000000000E+000</WallFrictionAngle_Layer>
+              <SoilType>_Clay</SoilType>
+              <NValue>1.000000E+000</NValue>
+              <WetUnitWeight>1.900000E+001</WetUnitWeight>
+              <SubmegedUnitWeight>9.000000E+000</SubmegedUnitWeight>
+              <SaturationUnitWeight>2.000000E+001</SaturationUnitWeight>
+              <FrictionAngle>2.800000E+001</FrictionAngle>
+              <Cohesion>8.210000E+002</Cohesion>
+              <CohesionCoefficient>0.000000E+000</CohesionCoefficient>
+              <ModulusOfDeformation>3.360000E+003</ModulusOfDeformation>
+              <WallFrictionAngle>1.500000E+001</WallFrictionAngle>
+              <WallFrictionAngle_Layer>0.000000E+000</WallFrictionAngle_Layer>
             </FillStruct>
             <ConsiderPositionMinFs>True</ConsiderPositionMinFs>
             <MinFsCalcPitch>_1m</MinFsCalcPitch>
@@ -241,8 +241,8 @@
               <SideList>
                 <SteelSheetPileOneSide>
                   <UseSteelNo>2</UseSteelNo>
-                  <UseMaterials>_SY295</UseMaterials>
-                  <InvalidLayerThickness>0.00000000000000E+000</InvalidLayerThickness>
+                  <UseMaterials>_SY390</UseMaterials>
+                  <InvalidLayerThickness>0.000000E+000</InvalidLayerThickness>
                   <EmbedmentSoilValue>_Sandy</EmbedmentSoilValue>
                   <VerticalForce>0.00000000000000E+000</VerticalForce>
                   <ConsiderJoint>False</ConsiderJoint>
@@ -251,7 +251,7 @@
                 </SteelSheetPileOneSide>
                 <SteelSheetPileOneSide>
                   <UseSteelNo>2</UseSteelNo>
-                  <UseMaterials>_SY295</UseMaterials>
+                  <UseMaterials>_SY390</UseMaterials>
                   <InvalidLayerThickness>0.00000000000000E+000</InvalidLayerThickness>
                   <EmbedmentSoilValue>_Sandy</EmbedmentSoilValue>
                   <VerticalForce>0.00000000000000E+000</VerticalForce>
@@ -273,8 +273,8 @@
               <DecaySpeedExcv>2.00000000000000E-002</DecaySpeedExcv>
               <DecaySpeedBack>1.50000000000000E-002</DecaySpeedBack>
               <DirectCorrosion>False</DirectCorrosion>
-              <CorrosionExcvT2>3.00000000000000E-001</CorrosionExcvT2>
-              <CorrosionBackT1>2.00000000000000E-002</CorrosionBackT1>
+              <CorrosionExcvT2>0.000000E+000</CorrosionExcvT2>
+              <CorrosionBackT1>0.000000E+000</CorrosionBackT1>
             </SteelSheetPile>
             <SteelPipeSheetPile>
               <SideList>
@@ -311,26 +311,26 @@
           <TensionMember>
             <MemberList>
               <Member>
-                <Level>4.00000000000000E+000</Level>
+                <Level>2.000000E+000</Level>
                 <Effective>False</Effective>
-                <Space>8.00000000000000E-001</Space>
-                <UseSteelDiameter>2.50000000000000E+001</UseSteelDiameter>
-                <UseMaterialNumber>1</UseMaterialNumber>
-                <UseMembers>1</UseMembers>
+                <Space>4.000000E+000</Space>
+                <UseSteelDiameter>3.800000E+001</UseSteelDiameter>
+                <UseMaterialNumber>3</UseMaterialNumber>
+                <UseMembers>5</UseMembers>
                 <InputTensionSpring>False</InputTensionSpring>
-                <SpringConstant>1.00000000000000E+000</SpringConstant>
+                <SpringConstant>0.000000E+000</SpringConstant>
                 <WalingMaterials>_SS400</WalingMaterials>
               </Member>
               <Member>
-                <Level>5.00000000000000E-001</Level>
-                <Effective>False</Effective>
-                <Space>8.00000000000000E-001</Space>
-                <UseSteelDiameter>4.80000000000000E+001</UseSteelDiameter>
-                <UseMaterialNumber>2</UseMaterialNumber>
-                <UseMembers>1</UseMembers>
+                <Level>4.000000E+000</Level>
+                <Effective>True</Effective>
+                <Space>4.000000E+000</Space>
+                <UseSteelDiameter>3.400000E+001</UseSteelDiameter>
+                <UseMaterialNumber>3</UseMaterialNumber>
+                <UseMembers>4</UseMembers>
                 <InputTensionSpring>False</InputTensionSpring>
-                <SpringConstant>1.00000000000000E+000</SpringConstant>
-                <WalingMaterials>_SS400</WalingMaterials>
+                <SpringConstant>0.000000E+000</SpringConstant>
+                <WalingMaterials>_SM490</WalingMaterials>
               </Member>
             </MemberList>
           </TensionMember>
@@ -781,23 +781,23 @@
             <Stratum>
               <eSoilInputType>_Thickness</eSoilInputType>
               <Name />
-              <Level>0.00000000000000E+000</Level>
+              <Level>5.000000E+000</Level>
               <LayerList>
                 <Layer>
-                  <Thickness>1.50000000000000E+001</Thickness>
-                  <SoilType>_Sandy</SoilType>
-                  <Nvalue>1.20000000000000E+001</Nvalue>
-                  <WetUnitWeight>1.80000000000000E+001</WetUnitWeight>
-                  <SubmergedUnitWeight>9.00000000000000E+000</SubmergedUnitWeight>
-                  <SaturationUnitWeight>1.90000000000000E+001</SaturationUnitWeight>
-                  <FrictionAngle>3.00000000000000E+001</FrictionAngle>
-                  <Cohesion>0.00000000000000E+000</Cohesion>
-                  <CohesionCoefficient>0.00000000000000E+000</CohesionCoefficient>
-                  <ModulusOfDeformation>3.36000000000000E+004</ModulusOfDeformation>
-                  <InputCoefficientSubgrade>1.00000000000000E+000</InputCoefficientSubgrade>
-                  <LiquefactionResistanceRate>1.30000000000000E+000</LiquefactionResistanceRate>
-                  <WallFrictionAngle>1.50000000000000E+001</WallFrictionAngle>
-                  <WallFrictionAngle_Layer>1.50000000000000E+001</WallFrictionAngle_Layer>
+                  <Thickness>1.000000E+002</Thickness>
+                  <SoilType>_Clay</SoilType>
+                  <Nvalue>2.900000E+001</Nvalue>
+                  <WetUnitWeight>1.900000E+001</WetUnitWeight>
+                  <SubmergedUnitWeight>9.000000E+000</SubmergedUnitWeight>
+                  <SaturationUnitWeight>2.000000E+001</SaturationUnitWeight>
+                  <FrictionAngle>7.000000E+000</FrictionAngle>
+                  <Cohesion>5.140000E+002</Cohesion>
+                  <CohesionCoefficient>0.000000E+000</CohesionCoefficient>
+                  <ModulusOfDeformation>8.120000E+004</ModulusOfDeformation>
+                  <InputCoefficientSubgrade>1.000000E+000</InputCoefficientSubgrade>
+                  <LiquefactionResistanceRate>1.300000E+000</LiquefactionResistanceRate>
+                  <WallFrictionAngle>1.500000E+001</WallFrictionAngle>
+                  <WallFrictionAngle_Layer>1.500000E+001</WallFrictionAngle_Layer>
                 </Layer>
               </LayerList>
               <ChangeKoList />
@@ -805,23 +805,23 @@
             <Stratum>
               <eSoilInputType>_Thickness</eSoilInputType>
               <Name />
-              <Level>0.00000000000000E+000</Level>
+              <Level>1.000000E+000</Level>
               <LayerList>
                 <Layer>
-                  <Thickness>1.50000000000000E+001</Thickness>
+                  <Thickness>1.000000E+002</Thickness>
                   <SoilType>_Sandy</SoilType>
-                  <Nvalue>1.20000000000000E+001</Nvalue>
-                  <WetUnitWeight>1.80000000000000E+001</WetUnitWeight>
-                  <SubmergedUnitWeight>9.00000000000000E+000</SubmergedUnitWeight>
-                  <SaturationUnitWeight>1.90000000000000E+001</SaturationUnitWeight>
-                  <FrictionAngle>3.00000000000000E+001</FrictionAngle>
-                  <Cohesion>0.00000000000000E+000</Cohesion>
-                  <CohesionCoefficient>0.00000000000000E+000</CohesionCoefficient>
-                  <ModulusOfDeformation>3.36000000000000E+004</ModulusOfDeformation>
-                  <InputCoefficientSubgrade>1.00000000000000E+000</InputCoefficientSubgrade>
-                  <LiquefactionResistanceRate>1.30000000000000E+000</LiquefactionResistanceRate>
-                  <WallFrictionAngle>1.50000000000000E+001</WallFrictionAngle>
-                  <WallFrictionAngle_Layer>1.50000000000000E+001</WallFrictionAngle_Layer>
+                  <Nvalue>4.100000E+001</Nvalue>
+                  <WetUnitWeight>1.900000E+001</WetUnitWeight>
+                  <SubmergedUnitWeight>9.000000E+000</SubmergedUnitWeight>
+                  <SaturationUnitWeight>2.000000E+001</SaturationUnitWeight>
+                  <FrictionAngle>3.800000E+001</FrictionAngle>
+                  <Cohesion>2.110000E+002</Cohesion>
+                  <CohesionCoefficient>0.000000E+000</CohesionCoefficient>
+                  <ModulusOfDeformation>3.700000E+004</ModulusOfDeformation>
+                  <InputCoefficientSubgrade>1.000000E+000</InputCoefficientSubgrade>
+                  <LiquefactionResistanceRate>1.300000E+000</LiquefactionResistanceRate>
+                  <WallFrictionAngle>1.500000E+001</WallFrictionAngle>
+                  <WallFrictionAngle_Layer>1.500000E+001</WallFrictionAngle_Layer>
                 </Layer>
               </LayerList>
               <ChangeKoList />
@@ -829,23 +829,23 @@
             <Stratum>
               <eSoilInputType>_Thickness</eSoilInputType>
               <Name />
-              <Level>0.00000000000000E+000</Level>
+              <Level>3.000000E+000</Level>
               <LayerList>
                 <Layer>
-                  <Thickness>1.50000000000000E+001</Thickness>
-                  <SoilType>_Sandy</SoilType>
-                  <Nvalue>1.20000000000000E+001</Nvalue>
-                  <WetUnitWeight>1.80000000000000E+001</WetUnitWeight>
-                  <SubmergedUnitWeight>9.00000000000000E+000</SubmergedUnitWeight>
-                  <SaturationUnitWeight>1.90000000000000E+001</SaturationUnitWeight>
-                  <FrictionAngle>3.00000000000000E+001</FrictionAngle>
-                  <Cohesion>0.00000000000000E+000</Cohesion>
-                  <CohesionCoefficient>0.00000000000000E+000</CohesionCoefficient>
-                  <ModulusOfDeformation>3.36000000000000E+004</ModulusOfDeformation>
-                  <InputCoefficientSubgrade>1.00000000000000E+000</InputCoefficientSubgrade>
-                  <LiquefactionResistanceRate>1.30000000000000E+000</LiquefactionResistanceRate>
-                  <WallFrictionAngle>1.50000000000000E+001</WallFrictionAngle>
-                  <WallFrictionAngle_Layer>1.50000000000000E+001</WallFrictionAngle_Layer>
+                  <Thickness>1.000000E+002</Thickness>
+                  <SoilType>_Clay</SoilType>
+                  <Nvalue>3.000000E+000</Nvalue>
+                  <WetUnitWeight>1.900000E+001</WetUnitWeight>
+                  <SubmergedUnitWeight>9.000000E+000</SubmergedUnitWeight>
+                  <SaturationUnitWeight>2.000000E+001</SaturationUnitWeight>
+                  <FrictionAngle>1.900000E+001</FrictionAngle>
+                  <Cohesion>1.980000E+002</Cohesion>
+                  <CohesionCoefficient>0.000000E+000</CohesionCoefficient>
+                  <ModulusOfDeformation>9.580000E+004</ModulusOfDeformation>
+                  <InputCoefficientSubgrade>1.000000E+000</InputCoefficientSubgrade>
+                  <LiquefactionResistanceRate>1.300000E+000</LiquefactionResistanceRate>
+                  <WallFrictionAngle>1.500000E+001</WallFrictionAngle>
+                  <WallFrictionAngle_Layer>1.500000E+001</WallFrictionAngle_Layer>
                 </Layer>
               </LayerList>
               <ChangeKoList />
@@ -855,8 +855,8 @@
             <Case>
               <State>_Normal</State>
               <Name>常時</Name>
-              <LandsideHWL>4.60000000000000E+000</LandsideHWL>
-              <LandsideLWL>0.00000000000000E+000</LandsideLWL>
+              <LandsideHWL>4.000000E+000</LandsideHWL>
+              <LandsideLWL>4.000000E+000</LandsideLWL>
               <WatersideRWL>0.00000000000000E+000</WatersideRWL>
               <WatersideLWL>0.00000000000000E+000</WatersideLWL>
               <Qload>0.00000000000000E+000</Qload>
@@ -900,8 +900,8 @@
             <Case>
               <State>_Earthquake</State>
               <Name>地震時</Name>
-              <LandsideHWL>0.00000000000000E+000</LandsideHWL>
-              <LandsideLWL>0.00000000000000E+000</LandsideLWL>
+              <LandsideHWL>6.000000E+000</LandsideHWL>
+              <LandsideLWL>8.000000E+000</LandsideLWL>
               <WatersideRWL>0.00000000000000E+000</WatersideRWL>
               <WatersideLWL>0.00000000000000E+000</WatersideLWL>
               <Qload>0.00000000000000E+000</Qload>
@@ -931,7 +931,7 @@
               </LoadWaterSide>
               <LandSideN>0.00000000000000E+000</LandSideN>
               <WaterSideN>0.00000000000000E+000</WaterSideN>
-              <DesigneSeismicCoefficient>1.00000000000000E-001</DesigneSeismicCoefficient>
+              <DesigneSeismicCoefficient>0.000000E+000</DesigneSeismicCoefficient>
               <ApparentKhMethod>_Kasen</ApparentKhMethod>
               <CalcShearDeformationIsNormal>True</CalcShearDeformationIsNormal>
               <FLSeismicZoning>_EQ</FLSeismicZoning>
@@ -944,7 +944,7 @@
             </Case>
           </CaseList>
           <Decision>
-            <DamBodyWidth>5.50000000000000E+000</DamBodyWidth>
+            <DamBodyWidth>6.000000E+000</DamBodyWidth>
             <LandSideLength>9.00000000000000E+000</LandSideLength>
             <WaterSideLength>9.00000000000000E+000</WaterSideLength>
             <WalingList>
@@ -4279,8 +4279,8 @@
             <PlaneUnit>
               <Index No="0">
                 <Sita>90</Sita>
-                <Width>32</Width>
-                <Between>5.5</Between>
+                <Width>25</Width>
+                <Between>6</Between>
               </Index>
             </PlaneUnit>
             <SectionFlg>
@@ -4297,7 +4297,7 @@
               <Index No="0">
                 <InSideWall>
                   <Material>SY295</Material>
-                  <TopDepth>5.5</TopDepth>
+                  <TopDepth>9</TopDepth>
                   <Length>9</Length>
                   <SteelNo>2</SteelNo>
                   <LapPile>
@@ -4309,7 +4309,7 @@
                 </InSideWall>
                 <OutSideWall>
                   <Material>SY295</Material>
-                  <TopDepth>5.5</TopDepth>
+                  <TopDepth>7</TopDepth>
                   <Length>9</Length>
                   <SteelNo>2</SteelNo>
                   <LapPile>
@@ -4319,40 +4319,40 @@
                     <LapPileWeight>86.8</LapPileWeight>
                   </LapPile>
                 </OutSideWall>
-                <BetweenTopDepth>5.1</BetweenTopDepth>
+                <BetweenTopDepth>4</BetweenTopDepth>
                 <GroundDepth>
-                  <InSide>0</InSide>
-                  <OutSide>0</OutSide>
-                  <Between>0</Between>
+                  <InSide>3</InSide>
+                  <OutSide>5</OutSide>
+                  <Between>1</Between>
                 </GroundDepth>
                 <Tai>
                   <PosCnt>2</PosCnt>
                   <TaiUnit>
                     <Index No="0">
-                      <PosDepth>4</PosDepth>
-                      <Interval>0.8</Interval>
+                      <PosDepth>2</PosDepth>
+                      <Interval>4</Interval>
                       <RegulateAreaS>0</RegulateAreaS>
                       <RegulateCntS>0</RegulateCntS>
                       <RegulateAreaE>0</RegulateAreaE>
                       <RegulateCntE>0</RegulateCntE>
-                      <Deameter>25</Deameter>
+                      <Deameter>38</Deameter>
                       <BundleCnt>0</BundleCnt>
-                      <TaiMaterial>SS400（＜40mm）</TaiMaterial>
+                      <TaiMaterial>SS490（＜40mm）</TaiMaterial>
                       <HaraokoshiSteelNo>1</HaraokoshiSteelNo>
                       <HaraokoshiMaterial>SS400</HaraokoshiMaterial>
                     </Index>
                     <Index No="1">
-                      <PosDepth>0.5</PosDepth>
-                      <Interval>0.8</Interval>
+                      <PosDepth>4</PosDepth>
+                      <Interval>8</Interval>
                       <RegulateAreaS>0</RegulateAreaS>
                       <RegulateCntS>0</RegulateCntS>
                       <RegulateAreaE>0</RegulateAreaE>
                       <RegulateCntE>0</RegulateCntE>
-                      <Deameter>48</Deameter>
+                      <Deameter>34</Deameter>
                       <BundleCnt>0</BundleCnt>
-                      <TaiMaterial>SS400（＞40mm）</TaiMaterial>
-                      <HaraokoshiSteelNo>1</HaraokoshiSteelNo>
-                      <HaraokoshiMaterial>SS400</HaraokoshiMaterial>
+                      <TaiMaterial>SS490（＜40mm）</TaiMaterial>
+                      <HaraokoshiSteelNo>2</HaraokoshiSteelNo>
+                      <HaraokoshiMaterial>SM490</HaraokoshiMaterial>
                     </Index>
                   </TaiUnit>
                 </Tai>
@@ -4366,9 +4366,9 @@
           </Shape_Structure>
           <PlanCondition>
             <GroundPressure>クーロン</GroundPressure>
-            <WaterPressure>砂質土地盤</WaterPressure>
+            <WaterPressure>－－－－－</WaterPressure>
             <OnWeight>["  0.00kN/m2"]</OnWeight>
-            <InnerGround>砂質土</InnerGround>
+            <InnerGround>粘性土</InnerGround>
           </PlanCondition>
           <QuantityCondition No="0">
             <SmallNoCnt_m>3</SmallNoCnt_m>

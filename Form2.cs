@@ -11,9 +11,9 @@ using System.Xml;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form1 : Form
+    public partial class Form2 : Form
     {
-        public Form1()
+        public Form2()
         {
             InitializeComponent();
         }
@@ -29,7 +29,7 @@ namespace WindowsFormsApp1
             var param001 = r1.Next(10, 31); // 高さ 10m～30m
             editor_001.Edit(xmlDoc, param001);       // 堤体延長
 
-            editor_002.Edit(xmlDoc, r1.Next(10, 101) / 10);   // 堤体幅 1m～10m
+            editor_002.Edit(xmlDoc, r1.Next(10, 101)/10);   // 堤体幅 1m～10m
 
             // 堤内側矢板天端高さ
             var param003 = r1.Next(10, 101) / 10; // 高さ 1m～10m
@@ -47,10 +47,10 @@ namespace WindowsFormsApp1
             var max_h10 = Math.Min(param003, param004);
 
             var pich_10 = r1.Next(2, param001 * 5 + 1) / 10;                // 上段ピッチ 0.2m～堤体延長/2
-            editor_010.Edit(xmlDoc, pich_10,
+            editor_010.Edit(xmlDoc, pich_10,       
                                     r1.Next(2, max_h10 * 10) / 10);         // 上段深さ   0.2m～矢板天端高さ
             var pich_11 = r1.Next(2, param001 * 5 + 1) / 10;                // 上段ピッチ 0.2m～堤体延長/2
-            editor_011.Edit(xmlDoc, pich_11,
+            editor_011.Edit(xmlDoc, pich_11,                                
                                     r1.Next(2, max_h10 * 10) / 10);         // 下段深さ   0.2m～矢板天端高さ
 
             // 地層データ
@@ -72,7 +72,7 @@ namespace WindowsFormsApp1
                 r1.Next(0, 51),             // 内部摩擦角 0 ～ 50°
                 r1.Next(0, 1000),           // 粘着力 0 ～ 1000
                 0,                          // 粘着力 増分 0
-                r1.Next(10, 2000) * 100       // 変形係数 1000 ～ 200000
+                r1.Next(10, 2000)*100       // 変形係数 1000 ～ 200000
                 );
 
             // 堤内区間地表面（現地盤）高G.L.
@@ -145,7 +145,7 @@ namespace WindowsFormsApp1
 
             // 1段目
             // 使用鋼材直径
-            var Dia1 = r1.Next(10, 51);
+            var Dia1 = r1.Next(10, 51);                     
             // 使用材料番号 
             int[] _No;
             if (Dia1 < 40)
@@ -183,7 +183,7 @@ namespace WindowsFormsApp1
                                     0,                      // バネ定数 
                                     w1,                     // 腹起し材質  
                                     sNo,
-                                    jNo + 1,
+                                    jNo + 1 ,
                                     w1.Replace("_", "")
                                     );
 
@@ -263,90 +263,5 @@ namespace WindowsFormsApp1
 
             MessageBox.Show("＼(^o^)／ｵﾜﾀ");
         }
-
-
-        /*
-        private void button1_Click(object sender, EventArgs e)
-        {
-            var xmlDoc = new XmlDocument();
-            xmlDoc.Load(@"data/master.f7n");
-
-            //editor_001.Edit(xmlDoc, 10.0);
-            //editor_002.Edit(xmlDoc, 4.5);
-            //editor_003.Edit(xmlDoc, 3.5);
-            //editor_004.Edit(xmlDoc, 3.5);
-            //editor_005.Edit(xmlDoc, 3.5);
-            //editor_010.Edit(xmlDoc, 1, 4);
-            //editor_011.Edit(xmlDoc, 1, 0.5);
-            //editor_012.Edit(xmlDoc, 5);
-            //editor_013.Edit(xmlDoc,
-            //    1.40000000000000E+001,
-            //    "_Clay",
-            //    1.10000000000000E+001,
-            //    1.70000000000000E+001,
-            //    8.00000000000000E+000,
-            //    1.80000000000000E+001,
-            //    2.50000000000000E+001,
-            //    5.00000000000000E-001,
-            //    5.00000000000000E-001,
-            //    3.00000000000000E+004
-            //    );
-            //editor_014.Edit(xmlDoc, 5);
-            //editor_015.Edit(xmlDoc,
-            //    "粘性土",
-            //    "_Clay",
-            //    1.10000000000000E+001,
-            //    1.70000000000000E+001,
-            //    8.00000000000000E+000,
-            //    1.80000000000000E+001,
-            //    2.50000000000000E+001,
-            //    5.00000000000000E+000,
-            //    5.00000000000000E-001
-            //    );
-            //editor_016.Edit(xmlDoc,
-            //    1.40000000000000E+001,
-            //    "_Clay",
-            //    1.10000000000000E+001,
-            //    1.70000000000000E+001,
-            //    8.00000000000000E+000,
-            //    1.80000000000000E+001,
-            //    2.50000000000000E+001,
-            //    8.00000000000000E-001,
-            //    6.00000000000000E-001,
-            //    3.00000000000000E+004
-            //    );
-            //editor_017.Edit(xmlDoc, 5);
-            //editor_018.Edit(xmlDoc,
-            //    1.40000000000000E+001,
-            //    "_Clay",
-            //    1.10000000000000E+001,
-            //    1.70000000000000E+001,
-            //    8.00000000000000E+000,
-            //    1.80000000000000E+001,
-            //    2.50000000000000E+001,
-            //    5.00000000000000E-001,
-            //    5.00000000000000E-001,
-            //    3.00000000000000E+004
-            //    );
-            //editor_019.Edit(xmlDoc, 6.00000000000000E-001, 8.00000000000000E-001);
-            //editor_020.Edit(xmlDoc, 4);
-            //editor_021.Edit(xmlDoc, "_SY390");
-            //editor_022.Edit(xmlDoc, "_Clay");
-            //editor_023.Edit(xmlDoc, 5.00000000000000E+000);
-            //editor_024.Edit(xmlDoc, true, 9.00000000000000E-001, 20, 2, 2, true, 2, "_SM490", "SS400（＞40mm)", 2, "SM490");
-            //editor_025.Edit(xmlDoc, true, 9.00000000000000E-001, 45, 1, 2, true, 2, "_SM490", "SS400（＜40mm）", 2, "SM490");
-            //editor_026.Edit(xmlDoc, "高水位時");
-            //editor_027.Edit(xmlDoc, 5.00000000000000E+000, 1.00000000000000E+000, 1, 5, 3);
-            //editor_028.Edit(xmlDoc, 1.00000000000000E+000);
-            //editor_029.Edit(xmlDoc, "高水位時");
-            //editor_030.Edit(xmlDoc, 1.00000000000000E+000, 5.00000000000000E-001);
-            //editor_031.Edit(xmlDoc, 5.00000000000000E-001);
-            //editor_032.Edit(xmlDoc, 1.00000000000000E+000);
-
-            xmlDoc.Save(@"../../data/edited.f7n");
-
-            MessageBox.Show("＼(^o^)／ｵﾜﾀ");
-        }
-        */
     }
 }

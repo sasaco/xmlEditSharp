@@ -86,9 +86,9 @@ namespace WindowsFormsApp1
                 var FillStruct = helper.getXmlElement(Init, "FillStruct");
                 var Thickness = helper.getXmlElement(FillStruct, "Thickness");
                 var SoilType = helper.getXmlElement(FillStruct, "SoilType");
-                var Nvalue = helper.getXmlElement(FillStruct, "Nvalue");
+                var NValue = helper.getXmlElement(FillStruct, "NValue");
                 var WetUnitWeight = helper.getXmlElement(FillStruct, "WetUnitWeight");
-                var SubmergedUnitWeight = helper.getXmlElement(FillStruct, "SubmergedUnitWeight");
+                var SubmegedUnitWeight = helper.getXmlElement(FillStruct, "SubmegedUnitWeight");
                 var SaturationUnitWeight = helper.getXmlElement(FillStruct, "SaturationUnitWeight");
                 var FrictionAngle = helper.getXmlElement(FillStruct, "FrictionAngle");
                 var Cohesion = helper.getXmlElement(FillStruct, "Cohesion");
@@ -98,9 +98,9 @@ namespace WindowsFormsApp1
                 var WallFrictionAngle_Layer = helper.getXmlElement(FillStruct, "WallFrictionAngle_Layer");
 
                 SoilType.InnerText = _SoilType;
-                Nvalue.InnerText = _Nvalue.ToString("E");
+                NValue.InnerText = _Nvalue.ToString("E");
                 WetUnitWeight.InnerText = _WetUnitWeight.ToString("E");
-                SubmergedUnitWeight.InnerText = _SubmergedUnitWeight.ToString("E");
+                SubmegedUnitWeight.InnerText = _SubmergedUnitWeight.ToString("E");
                 SaturationUnitWeight.InnerText = _SaturationUnitWeight.ToString("E");
                 FrictionAngle.InnerText = _FrictionAngle.ToString("E");
                 Cohesion.InnerText = _Cohesion.ToString("E");

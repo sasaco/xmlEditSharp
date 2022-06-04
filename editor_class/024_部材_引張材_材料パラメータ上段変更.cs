@@ -120,9 +120,20 @@ namespace WindowsFormsApp1
         /// 部材引張材材料パラメータ下段変更
         /// </summary>
         /// <param name="xmlDoc">変更する対象</param>
-        /// <param name="value">新しい値</param>
-        static public void Edit(XmlDocument xmlDoc, double value)
-        {
+        /// <param name="_space">新しい値</param>
+        static public void Edit(XmlDocument xmlDoc, 
+            bool _effective, 
+            double _space, 
+            int _UseSteelDiameter, 
+            int _UseMaterialNumber, 
+            int _UseMembers, 
+            bool _InputTensionSpring, 
+            int _SpringConstant, 
+            string _WalingMaterials,
+            string _TaiMaterial,
+            int _HaraokoshiSteelNo,
+            string _HaraokoshiMaterial
+            ) {
             XmlElement root = xmlDoc.DocumentElement;
 
             var Products = helper.getXmlElement(root, "Products");
@@ -137,53 +148,59 @@ namespace WindowsFormsApp1
 
             var Effective = helper.getXmlElement(Member, "Effective");
 
-            Effective.InnerText = value.ToString();
+            Effective.InnerText = _effective.ToString();
 
 
             // 
             var Space = helper.getXmlElement(Member, "Space");
-            
-
-            Space.InnerText = value.ToString("E");
+            Space.InnerText = _space.ToString("E");
             
             // 
             var UseSteelDiameter = helper.getXmlElement(Member, "UseSteelDiameter");
-            
-
-            UseSteelDiameter.InnerText = value.ToString("E");
+            UseSteelDiameter.InnerText = _UseSteelDiameter.ToString("E");
             
             // 
             var UseMaterialNumber = helper.getXmlElement(Member, "UseMaterialNumber");
-            
-
-            UseMaterialNumber.InnerText = value.ToString();
-            
+            UseMaterialNumber.InnerText = _UseMaterialNumber.ToString();
             
             // 
             var UseMembers = helper.getXmlElement(Member, "UseMembers");
-            
-
-            UseMembers.InnerText = value.ToString();
+            UseMembers.InnerText = _UseMembers.ToString();
             
             //
             var InputTensionSpring = helper.getXmlElement(Member, "InputTensionSpring");
-            
-
-            InputTensionSpring.InnerText = value.ToString();
-            
+            InputTensionSpring.InnerText = _InputTensionSpring.ToString();
             
             //
             var SpringConstant = helper.getXmlElement(Member, "SpringConstant");
-            
-
-            SpringConstant.InnerText = value.ToString("E");
+            SpringConstant.InnerText = _SpringConstant.ToString("E");
             
             //
             var WalingMaterials = helper.getXmlElement(Member, "WalingMaterials");
-            
+            WalingMaterials.InnerText = _WalingMaterials.ToString();
 
-            WalingMaterials.InnerText = value.ToString();
+            var DrawingCreationData = helper.getXmlElement(WShut3, "DrawingCreationData");
+            var InputData1 = helper.getXmlElement(DrawingCreationData, "InputData");
+            var Shape_Structure = helper.getXmlElement(InputData1, "Shape_Structure");
+            var StructureUnit = helper.getXmlElement(Shape_Structure, "StructureUnit");
+            var Index1 = helper.getXmlElement(StructureUnit, "Index");
+            var Tai = helper.getXmlElement(Index1, "Tai");
+            var TaiUnit = helper.getXmlElement(Tai, "TaiUnit");
+            var Index2 = helper.getXmlElement(TaiUnit, "Index");
+
+            var Deameter = helper.getXmlElement(Index2, "Deameter");
+            Deameter.InnerText = _UseSteelDiameter.ToString();
+
+            var TaiMaterial = helper.getXmlElement(Index2, "TaiMaterial");
+            TaiMaterial.InnerText = _TaiMaterial.ToString();
+
+            var HaraokoshiSteelNo = helper.getXmlElement(Index2, "HaraokoshiSteelNo");
+            HaraokoshiSteelNo.InnerText = _HaraokoshiSteelNo.ToString();
+
+            var HaraokoshiMaterial = helper.getXmlElement(Index2, "HaraokoshiMaterial");
+            HaraokoshiMaterial.InnerText = _HaraokoshiMaterial.ToString();
 
         }
+
     }
 }

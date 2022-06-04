@@ -65,7 +65,7 @@ namespace WindowsFormsApp1
         /// </summary>
         /// <param name="xmlDoc">変更する対象</param>
         /// <param name="value">新しい値</param>
-        static public void Edit(XmlDocument xmlDoc, double value)
+        static public void Edit(XmlDocument xmlDoc, string value)
         {
             XmlElement root = xmlDoc.DocumentElement;
 
@@ -76,38 +76,23 @@ namespace WindowsFormsApp1
             var Wall = helper.getXmlElement(WShutData, "Wall");
             var SteelSheetPile = helper.getXmlElement(Wall, "SteelSheetPile",2);
 
-
             // 
-            var CorrosionExcvT2 = helper.getXmlElement(SteelSheetPile, "CorrosionExcvT2");
-
-
-            CorrosionExcvT2.InnerText = value.ToString();
-
-            // 
-            var CorrosionBackT1 = helper.getXmlElement(SteelSheetPile, "CorrosionBackT1");
-
-
-            CorrosionBackT1.InnerText = value.ToString("E");
-
-
-            // 
-
             var SideList = helper.getXmlElement(SteelSheetPile, "SideList");
 
             //
-            var SteelSheetPileOneSide1 = helper.getXmlElement(SideList, "SteelSheetPileOneSide1");
-            var UseMaterials1 = helper.getXmlElement(SteelSheetPile, "UseMaterials1");
+            var SteelSheetPileOneSide1 = helper.getXmlElement(SideList, "SteelSheetPileOneSide");
+            var UseMaterials1 = helper.getXmlElement(SteelSheetPileOneSide1, "UseMaterials");
 
 
             UseMaterials1.InnerText = value.ToString();
             
 
             //
-            var SteelSheetPileOneSide2 = helper.getXmlElement(SideList, "SteelSheetPileOneSide2");
-            var UseMaterials2 = helper.getXmlElement(SteelSheetPile, "UseMaterials2");
+            var SteelSheetPileOneSide2 = helper.getXmlElement(SideList, "SteelSheetPileOneSide", 1);
+            var UseMaterials2 = helper.getXmlElement(SteelSheetPileOneSide2, "UseMaterials");
 
 
-            UseMaterials2.InnerText = value.ToString("E");
+            UseMaterials2.InnerText = value.ToString();
             
 
             

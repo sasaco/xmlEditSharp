@@ -43,8 +43,9 @@ namespace WindowsFormsApp1
         /// 引張材平面配置_標準ピッチ上段変更
         /// </summary>
         /// <param name="xmlDoc">変更する対象</param>
-        /// <param name="value">新しい値</param>
-        static public void Edit(XmlDocument xmlDoc, double value )
+        /// <param name="_Interval">間隔</param>
+        /// <param name="_PosDepth">深さ位置</param>
+        static public void Edit(XmlDocument xmlDoc, double _Interval, double _PosDepth)
         {
             XmlElement root = xmlDoc.DocumentElement;
 
@@ -60,9 +61,12 @@ namespace WindowsFormsApp1
             var Tai = helper.getXmlElement(Index1, "Tai");
             var TaiUnit = helper.getXmlElement(Tai, "TaiUnit");
             var Index2 = helper.getXmlElement(TaiUnit, "Index");
-            var Interval = helper.getXmlElement(Index2, "Interval");
 
-            Interval.InnerText = value.ToString();
+            var Interval = helper.getXmlElement(Index2, "Interval");
+            Interval.InnerText = _Interval.ToString();
+
+            var PosDepth = helper.getXmlElement(Index2, "PosDepth");
+            PosDepth.InnerText = _PosDepth.ToString();
 
 
             // 
@@ -75,7 +79,17 @@ namespace WindowsFormsApp1
             var TierodData = helper.getXmlElement(TierodDataList, "TierodData");
             var NormalPitch = helper.getXmlElement(TierodData, "NormalPitch");
 
-            NormalPitch.InnerText = value.ToString("E");
+            NormalPitch.InnerText = _Interval.ToString("E");
+
+
+            var InputData = helper.getXmlElement(WShut3, "InputData");
+            var WShutData1 = helper.getXmlElement(InputData, "WShutData");
+            var TensionMember = helper.getXmlElement(WShutData1, "TensionMember");
+            var MemberList = helper.getXmlElement(TensionMember, "MemberList");
+            var Member = helper.getXmlElement(MemberList, "Member");
+            var Level = helper.getXmlElement(Member, "Level");
+
+            Level.InnerText = _PosDepth.ToString("E");
 
         }
 

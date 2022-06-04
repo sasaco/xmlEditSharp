@@ -96,14 +96,14 @@ namespace WindowsFormsApp1
             //
 
 
-            var InvalidLayerThickness1 = helper.getXmlElement(SteelSheetPile, "InvalidLayerThickness1");
+            var InvalidLayerThickness1 = helper.getXmlElement(SteelSheetPileOneSide, "InvalidLayerThickness");
             
 
             InvalidLayerThickness1.InnerText = value.ToString("E");
 
 
             // 
-            var InvalidLayerThickness2 = helper.getXmlElement(SteelSheetPile, "InvalidLayerThickness2");
+            var InvalidLayerThickness2 = helper.getXmlElement(SteelSheetPileOneSide, "InvalidLayerThickness");
             
 
             InvalidLayerThickness2.InnerText = value.ToString("E");

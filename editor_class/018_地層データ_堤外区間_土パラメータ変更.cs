@@ -80,7 +80,7 @@ namespace WindowsFormsApp1
             var StratumList = helper.getXmlElement(WShutData, "StratumList");
             var Stratum = helper.getXmlElement(StratumList, "Stratum", 2); // 13とここが違う
             var LayerList = helper.getXmlElement(Stratum, "LayerList");
-            var Layer = helper.getXmlElement(Stratum, "Layer");
+            var Layer = helper.getXmlElement(LayerList, "Layer");
 
             var Thickness = helper.getXmlElement(Layer, "Thickness");
             var SoilType = helper.getXmlElement(Layer, "SoilType");
