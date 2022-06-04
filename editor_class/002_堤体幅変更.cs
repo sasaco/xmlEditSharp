@@ -35,8 +35,8 @@ namespace WindowsFormsApp1
         /// 堤体幅変更
         /// </summary>
         /// <param name="xmlDoc">変更する対象</param>
-        /// <param name="value">新しい値</param>
-        static public void Edit(XmlDocument xmlDoc, double value)
+        /// <param name="_DamBodyWidth">新しい値</param>
+        static public void Edit(XmlDocument xmlDoc, double _DamBodyWidth)
         {
             XmlElement root = xmlDoc.DocumentElement;
 
@@ -51,17 +51,16 @@ namespace WindowsFormsApp1
             var Index = helper.getXmlElement(PlaneUnit, "Index");
             var Between = helper.getXmlElement(Index, "Between");
 
-            Between.InnerText = value.ToString();
+            Between.InnerText = _DamBodyWidth.ToString();
 
 
             // 
             var InputData2 = helper.getXmlElement(WShut3, "InputData");
             var WShutData = helper.getXmlElement(InputData2, "WShutData");
             var Decision = helper.getXmlElement(WShutData, "Decision");
+
             var DamBodyWidth = helper.getXmlElement(Decision, "DamBodyWidth");
-
-            DamBodyWidth.InnerText = value.ToString("E");
-
+            DamBodyWidth.InnerText = _DamBodyWidth.ToString("E");
         }
     }
 }

@@ -37,8 +37,8 @@ namespace WindowsFormsApp1
         /// 堤外側矢板天端高変更
         /// </summary>
         /// <param name="xmlDoc">変更する対象</param>
-        /// <param name="value">新しい値</param>
-        static public void Edit(XmlDocument xmlDoc, double value )
+        /// <param name="_TopDepth">新しい値</param>
+        static public void Edit(XmlDocument xmlDoc, double _TopDepth, double _Length)
         {
             XmlElement root = xmlDoc.DocumentElement;
 
@@ -54,8 +54,10 @@ namespace WindowsFormsApp1
             var OutSideWall = helper.getXmlElement(Index, "OutSideWall");
             var TopDepth = helper.getXmlElement(OutSideWall, "TopDepth");
 
-            TopDepth.InnerText = value.ToString();
+            TopDepth.InnerText = _TopDepth.ToString();
 
+            var Length = helper.getXmlElement(OutSideWall, "Length");
+            Length.InnerText = _Length.ToString();
 
             // 
             var InputData2 = helper.getXmlElement(WShut3, "InputData");
@@ -63,8 +65,13 @@ namespace WindowsFormsApp1
             var Shape = helper.getXmlElement(WShutData, "Shape");
             var WaterSideLevel = helper.getXmlElement(Shape, "WaterSideLevel");
 
-            WaterSideLevel.InnerText = value.ToString("E");
+            WaterSideLevel.InnerText = _TopDepth.ToString("E");
 
+            // 
+            var Decision = helper.getXmlElement(WShutData, "Decision");
+
+            var WaterSideLength = helper.getXmlElement(Decision, "WaterSideLength");
+            WaterSideLength.InnerText = _Length.ToString("E");
         }
 
 
