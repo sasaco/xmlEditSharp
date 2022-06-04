@@ -23,7 +23,7 @@ namespace WindowsFormsApp1
             var xmlDoc = new XmlDocument();
             xmlDoc.Load(@"data/master.f7n");
 
-            /editor_001.Edit(xmlDoc, 10.0);
+            //editor_001.Edit(xmlDoc, 10.0);
             //editor_002.Edit(xmlDoc, 4.5);
             //editor_003.Edit(xmlDoc, 3.5);
             //editor_004.Edit(xmlDoc, 3.5);
@@ -81,14 +81,14 @@ namespace WindowsFormsApp1
             //    3.00000000000000E+004
             //    );
             //editor_019.Edit(xmlDoc, 6.00000000000000E-001, 8.00000000000000E-001);
-            editor_020.Edit(xmlDoc, 4);
+            //editor_020.Edit(xmlDoc, 4);
             //editor_021.Edit(xmlDoc, "_SY390");
             //editor_022.Edit(xmlDoc, "_Sandy");
-            //editor_023.Edit(xmlDoc, 5.00000000000000E+000);
+            //editor_023.Edit(xmlDoc, 3.200000000000E-001,2.0000000000000E-2, 5.00000000000000E+000, 5.00000000000000E+000);
             //editor_024.Edit(xmlDoc, true, 9.00000000000000E-001, 2.00000000000000E+001, 2, 2, true, 2.00000000000000E+000, "_SM490", 20, "SS400（＞40mm)", "SM490");
             //editor_025.Edit(xmlDoc, true, 9.00000000000000E-001, 4.50000000000000E+001, 1, 2, true, 2.00000000000000E+000, "_SM490", 45, "SS400（＜40mm）", "SM490");
             //editor_026.Edit(xmlDoc, "高水位時");
-            //editor_027.Edit(xmlDoc, 5.00000000000000E+000, 1.00000000000000E+000, 1, 5, 3);
+            //editor_027.Edit(xmlDoc, 5.00000000000000E+000, 1.00000000000000E+000);
             //editor_028.Edit(xmlDoc, 1.00000000000000E+000);
             //editor_029.Edit(xmlDoc, "高水位時");
             //editor_030.Edit(xmlDoc, 1.00000000000000E+000, 5.00000000000000E-001);

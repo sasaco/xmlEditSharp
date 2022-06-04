@@ -38,7 +38,7 @@ namespace WindowsFormsApp1
         /// </summary>
         /// <param name="xmlDoc">変更する対象</param>
         /// <param name="value">新しい値</param>
-        static public void Edit(XmlDocument xmlDoc, double value)
+        static public void Edit(XmlDocument xmlDoc, double HWL, double LWL)
         {
             XmlElement root = xmlDoc.DocumentElement;
 
@@ -53,14 +53,14 @@ namespace WindowsFormsApp1
 
             var LandsideHWL = helper.getXmlElement(Case, "LandsideHWL");
 
-            LandsideHWL.InnerText = value.ToString("E");
+            LandsideHWL.InnerText = HWL.ToString("E");
 
 
             // 
             var LandsideLWL = helper.getXmlElement(Case, "LandsideLWL");
             
 
-            LandsideLWL.InnerText = value.ToString("E");
+            LandsideLWL.InnerText = LWL.ToString("E");
 
         }
     }

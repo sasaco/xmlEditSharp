@@ -28,7 +28,7 @@ namespace WindowsFormsApp1
         /// </summary>
         /// <param name="xmlDoc">変更する対象</param>
         /// <param name="value">新しい値</param>
-        static public void Edit(XmlDocument xmlDoc, double value )
+        static public void Edit(XmlDocument xmlDoc, string value )
         {
             XmlElement root = xmlDoc.DocumentElement;
 

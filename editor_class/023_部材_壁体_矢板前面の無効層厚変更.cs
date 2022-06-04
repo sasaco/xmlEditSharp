@@ -65,7 +65,7 @@ namespace WindowsFormsApp1
         /// </summary>
         /// <param name="xmlDoc">変更する対象</param>
         /// <param name="value">新しい値</param>
-        static public void Edit(XmlDocument xmlDoc, double value)
+        static public void Edit(XmlDocument xmlDoc, double ce, double cb, double IT1, double IT2)
         {
             XmlElement root = xmlDoc.DocumentElement;
 
@@ -80,13 +80,13 @@ namespace WindowsFormsApp1
             var CorrosionExcvT2 = helper.getXmlElement(SteelSheetPile, "CorrosionExcvT2");
 
 
-            CorrosionExcvT2.InnerText = value.ToString("E");
+            CorrosionExcvT2.InnerText = ce.ToString("E");
 
             // 
             var CorrosionBackT1 = helper.getXmlElement(SteelSheetPile, "CorrosionBackT1");
 
 
-            CorrosionBackT1.InnerText = value.ToString("E");
+            CorrosionBackT1.InnerText = cb.ToString("E");
 
             // 
 
@@ -99,14 +99,14 @@ namespace WindowsFormsApp1
             var InvalidLayerThickness1 = helper.getXmlElement(SteelSheetPile, "InvalidLayerThickness1");
             
 
-            InvalidLayerThickness1.InnerText = value.ToString("E");
+            InvalidLayerThickness1.InnerText = IT1.ToString("E");
 
 
             // 
             var InvalidLayerThickness2 = helper.getXmlElement(SteelSheetPile, "InvalidLayerThickness2");
             
 
-            InvalidLayerThickness2.InnerText = value.ToString("E");
+            InvalidLayerThickness2.InnerText = IT2.ToString("E");
             
 
             

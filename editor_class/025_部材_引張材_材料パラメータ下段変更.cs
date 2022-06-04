@@ -32,7 +32,7 @@ namespace WindowsFormsApp1
                                     <Space>
 
      */
-     
+
     /*
      <Project>
         <Products>
@@ -45,7 +45,7 @@ namespace WindowsFormsApp1
                                     <UseSteelDiameter>
 
      */
-     
+
     /*
      <Project>
         <Products>
@@ -58,7 +58,7 @@ namespace WindowsFormsApp1
                                     <UseMaterialNumber>
 
      */
-     
+
     /*
      <Project>
         <Products>
@@ -71,7 +71,7 @@ namespace WindowsFormsApp1
                                     <UseMembers>
 
      */
-     
+
     /*
      <Project>
         <Products>
@@ -84,7 +84,7 @@ namespace WindowsFormsApp1
                                     <InputTensionSpring>
 
      */
-     
+
     /*
      <Project>
         <Products>
@@ -97,7 +97,7 @@ namespace WindowsFormsApp1
                                     <SpringConstant>
 
      */
-    
+
     /*
      <Project>
         <Products>
@@ -108,11 +108,53 @@ namespace WindowsFormsApp1
                             <MemberList>
                                 <Member>
                                     <WalingMaterials>
+      */
+    /*
+   <Project>
+      <Products>
+          <WShut3>
+               <DrawingCreationData>
+                      <InputData>
+                          <Shape_Structure>
+                              <Index No="0">
+                                  <Tai>
+                                      <TaiUnit>
+                                          <Index N0="1">
+                                              <Deameter>
 
-     */
-    
 
-    
+   */
+    /*
+    <Project>
+       <Products>
+           <WShut3>
+                <DrawingCreationData>
+                       <InputData>
+                           <Shape_Structure>
+                               <Index No="0">
+                                   <Tai>
+                                       <TaiUnit>
+                                           <Index N0="1">
+                                               <TaiMaterial>                                     
+
+
+    */
+    /*
+    <Project>
+       <Products>
+           <WShut3>
+                <DrawingCreationData>
+                       <InputData>
+                           <Shape_Structure>
+                               <Index No="0">
+                                   <Tai>
+                                       <TaiUnit>
+                                           <Index N0="1">
+                                               <Harakoshimaterial>     
+   */
+
+
+
 
     static public class editor_025
     {
@@ -121,68 +163,101 @@ namespace WindowsFormsApp1
         /// </summary>
         /// <param name="xmlDoc">変更する対象</param>
         /// <param name="value">新しい値</param>
-        static public void Edit(XmlDocument xmlDoc, double value)
+        static public void Edit(XmlDocument xmlDoc, bool eff, double spa, double USD, double UMN, double UM, bool ITS, double SC, string WM, double dea, string TM, string HM)
         {
             XmlElement root = xmlDoc.DocumentElement;
 
             var Products = helper.getXmlElement(root, "Products");
             var WShut3 = helper.getXmlElement(Products, "WShut3");
-            var InputData = helper.getXmlElement(WShut3, "InputData");
-            var WShutData = helper.getXmlElement(InputData, "WShutData");
+
+            //
+            var InputData1 = helper.getXmlElement(WShut3, "InputData1");
+            var WShutData = helper.getXmlElement(InputData1, "WShutData");
             var TensionMember = helper.getXmlElement(WShutData, "TensionMember");
             var MemberList = helper.getXmlElement(TensionMember, "MemberList");
-            var Member = helper.getXmlElement(MemberList, "Member",1);
+            var Member = helper.getXmlElement(MemberList, "Member", 1);
 
             // 
 
             var Effective = helper.getXmlElement(Member, "Effective");
 
-            Effective.InnerText = value.ToString();
+            Effective.InnerText = eff.ToString();
 
 
             // 
             var Space = helper.getXmlElement(Member, "Space");
-            
 
-            Space.InnerText = value.ToString("E");
-            
+
+            Space.InnerText = spa.ToString("E");
+
             // 
             var UseSteelDiameter = helper.getXmlElement(Member, "UseSteelDiameter");
-            
 
-            UseSteelDiameter.InnerText = value.ToString("E");
-            
+
+            UseSteelDiameter.InnerText = USD.ToString("E");
+
             // 
             var UseMaterialNumber = helper.getXmlElement(Member, "UseMaterialNumber");
-            
 
-            UseMaterialNumber.InnerText = value.ToString();
-            
-            
+
+            UseMaterialNumber.InnerText = UMN.ToString();
+
+
             // 
             var UseMembers = helper.getXmlElement(Member, "UseMembers");
-            
 
-            UseMembers.InnerText = value.ToString();
-            
+
+            UseMembers.InnerText = UM.ToString();
+
             //
             var InputTensionSpring = helper.getXmlElement(Member, "InputTensionSpring");
-            
 
-            InputTensionSpring.InnerText = value.ToString();
-            
-            
+
+            InputTensionSpring.InnerText = ITS.ToString();
+
+
             //
             var SpringConstant = helper.getXmlElement(Member, "SpringConstant");
-            
 
-            SpringConstant.InnerText = value.ToString("E");
-            
+
+            SpringConstant.InnerText = SC.ToString("E");
+
             //
             var WalingMaterials = helper.getXmlElement(Member, "WalingMaterials");
-            
 
-            WalingMaterials.InnerText = value.ToString();
+
+            WalingMaterials.InnerText = WM.ToString();
+
+            //
+            var DrawingCreationData = helper.getXmlElement(WShut3, "DrawingCreationData");
+            var InputData2 = helper.getXmlElement(DrawingCreationData, "InputData2");
+            var Shape_Structure = helper.getXmlElement(InputData2, "Shape_Structure");
+            var Index0 = helper.getXmlElement(Shape_Structure, "Index0");
+            var Tai = helper.getXmlElement(Index0, "Tai");
+            var TaiUnit = helper.getXmlElement(Tai, "TaiUnit");
+            var Index1 = helper.getXmlElement(TaiUnit, "Index1");
+
+            //
+            var Deameter = helper.getXmlElement(Index1, "Deameter");
+
+
+            Deameter.InnerText = dea.ToString();
+
+            //
+            var TaiMaterial = helper.getXmlElement(Index1, "TaiMaterial");
+
+
+            TaiMaterial.InnerText = TM.ToString();
+
+            //
+            var HaraokoshiMaterial = helper.getXmlElement(Index1, "HaraokoshiMaterial");
+
+
+            HaraokoshiMaterial.InnerText = dea.ToString();
+
+
+
+
 
         }
     }
