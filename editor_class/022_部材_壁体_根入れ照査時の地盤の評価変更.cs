@@ -77,34 +77,37 @@ namespace WindowsFormsApp1
             var SteelSheetPile = helper.getXmlElement(Wall, "SteelSheetPile",3);
 
             // 
+            var CorrosionExcvT2 = helper.getXmlElement(SteelSheetPile, "CorrosionExcvT2");
 
-            var SideList = helper.getXmlElement(SteelSheetPile, "SideList");
-            var SteelSheetPileOneSide = helper.getXmlElement(SideList, "SteelSheetPileOneSide");
-            var InvalidLayerThickness = helper.getXmlElement(SteelSheetPile, "EmbedmentSoilValue");
-            
-
-            EmbedmentSoilValue.InnerText = value.ToString();
-
-
-            // 
-            var SideList = helper.getXmlElement(SteelSheetPile, "SideList");
-            var SteelSheetPileOneSide = helper.getXmlElement(SideList, "SteelSheetPileOneSide",1);
-            var InvalidLayerThickness = helper.getXmlElement(SteelSheetPile, "EmbedmentSoilValue");
-            
-
-            InvalidLayerThickness.InnerText = value.ToString();
-            
-            // 
-            var CorrosionExcvT2 = helper.getXmlElement(SteelSheetPile", "CorrosionExcvT2");
-            
 
             CorrosionExcvT2.InnerText = value.ToString("E");
-            
+
             // 
-            var CorrosionBackT1 = helper.getXmlElement(SteelSheetPile", "CorrosionBackT1");
-            
+            var CorrosionBackT1 = helper.getXmlElement(SteelSheetPile, "CorrosionBackT1");
+
 
             CorrosionBackT1.InnerText = value.ToString("E");
+
+            // 
+
+            var SideList = helper.getXmlElement(SteelSheetPile, "SideList");
+
+            //
+            var SteelSheetPileOneSide1 = helper.getXmlElement(SideList, "SteelSheetPileOneSide1");
+            var InvalidLayerThickness1 = helper.getXmlElement(SteelSheetPile, "InvalidLayerThickness1");
+
+
+            InvalidLayerThickness1.InnerText = value.ToString();
+
+
+            //
+            var SteelSheetPileOneSide2 = helper.getXmlElement(SideList, "SteelSheetPileOneSide2");
+            var InvalidLayerThickness2 = helper.getXmlElement(SteelSheetPile, "InvalidLayerThickness2");
+
+
+            InvalidLayerThickness2.InnerText = value.ToString();
+            
+
             
             
 

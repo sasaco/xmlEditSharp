@@ -135,51 +135,51 @@ namespace WindowsFormsApp1
 
             // 
 
-            var Effective = helper.getXmlElement(Member", "Effective");
+            var Effective = helper.getXmlElement(Member, "Effective");
 
             Effective.InnerText = value.ToString();
 
 
             // 
-            var Space = helper.getXmlElement(Member", "Space");
+            var Space = helper.getXmlElement(Member, "Space");
             
 
             Space.InnerText = value.ToString("E");
             
             // 
-            var UseSteelDiameter = helper.getXmlElement(Member", "UseSteelDiameter");
+            var UseSteelDiameter = helper.getXmlElement(Member, "UseSteelDiameter");
             
 
             UseSteelDiameter.InnerText = value.ToString("E");
             
             // 
-            var UseMaterialNumber = helper.getXmlElement(Member", "UseMaterialNumber");
+            var UseMaterialNumber = helper.getXmlElement(Member, "UseMaterialNumber");
             
 
             UseMaterialNumber.InnerText = value.ToString();
             
             
             // 
-            var UseMembers = helper.getXmlElement(Member", "UseMembers");
+            var UseMembers = helper.getXmlElement(Member, "UseMembers");
             
 
             UseMembers.InnerText = value.ToString();
             
             //
-            var InputTensionSpring = helper.getXmlElement(Member", "InputTensionSpring");
+            var InputTensionSpring = helper.getXmlElement(Member, "InputTensionSpring");
             
 
             InputTensionSpring.InnerText = value.ToString();
             
             
             //
-            var SpringConstant = helper.getXmlElement(Member", "SpringConstant");
+            var SpringConstant = helper.getXmlElement(Member, "SpringConstant");
             
 
             SpringConstant.InnerText = value.ToString("E");
             
             //
-            var WalingMaterials = helper.getXmlElement(Member", "WalingMaterials");
+            var WalingMaterials = helper.getXmlElement(Member, "WalingMaterials");
             
 
             WalingMaterials.InnerText = value.ToString();

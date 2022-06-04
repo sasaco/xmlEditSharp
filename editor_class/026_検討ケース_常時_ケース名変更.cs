@@ -40,7 +40,7 @@ namespace WindowsFormsApp1
             var Case = helper.getXmlElement(CaseList, "Case");
             var Name = helper.getXmlElement(Case, "Name");
 
-            Name = value.ToString();
+            Name.InnerText = value.ToString();
 
         }
 

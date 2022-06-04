@@ -47,7 +47,7 @@ namespace WindowsFormsApp1
             var InputData = helper.getXmlElement(WShut3, "InputData");
             var WShutData = helper.getXmlElement(InputData, "WShutData");
             var CaseList = helper.getXmlElement(WShutData, "CaseList");
-            var Case = helper.getXmlElement(PlaneUnit, "Case",1);
+            var Case = helper.getXmlElement(CaseList, "Case",1);
 
             // 
 

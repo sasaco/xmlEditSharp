@@ -38,9 +38,9 @@ namespace WindowsFormsApp1
             var WShutData = helper.getXmlElement(InputData, "WShutData");
             var CaseList = helper.getXmlElement(WShutData, "CaseList");
             var Case = helper.getXmlElement(CaseList, "Case",1);
-            var Name = helper.getXmlElement(Case "Name");
+            var Name = helper.getXmlElement(Case, "Name");
 
-            Name = value.ToString();
+            Name.InnerText = value.ToString();
 
         }
 

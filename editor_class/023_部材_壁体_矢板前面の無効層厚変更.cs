@@ -76,35 +76,39 @@ namespace WindowsFormsApp1
             var Wall = helper.getXmlElement(WShutData, "Wall");
             var SteelSheetPile = helper.getXmlElement(Wall,"SteelSheetPile",4);
 
+            //  
+            var CorrosionExcvT2 = helper.getXmlElement(SteelSheetPile, "CorrosionExcvT2");
+
+
+            CorrosionExcvT2.InnerText = value.ToString("E");
+
+            // 
+            var CorrosionBackT1 = helper.getXmlElement(SteelSheetPile, "CorrosionBackT1");
+
+
+            CorrosionBackT1.InnerText = value.ToString("E");
+
             // 
 
             var SideList = helper.getXmlElement(SteelSheetPile, "SideList");
             var SteelSheetPileOneSide = helper.getXmlElement(SideList, "SteelSheetPileOneSide");
-            var InvalidLayerThickness = helper.getXmlElement(SteelSheetPile, "InvalidLayerThickness");
+
+            //
+
+
+            var InvalidLayerThickness1 = helper.getXmlElement(SteelSheetPile, "InvalidLayerThickness1");
             
 
-            EInvalidLayerThickness.InnerText = value.ToString("E");
+            InvalidLayerThickness1.InnerText = value.ToString("E");
 
 
             // 
-            var SideList = helper.getXmlElement(SteelSheetPile, "SideList");
-            var SteelSheetPileOneSide = helper.getXmlElement(SideList, "SteelSheetPileOneSide",1);
-            var InvalidLayerThickness = helper.getXmlElement(SteelSheetPile, "InvalidLayerThickness");
+            var InvalidLayerThickness2 = helper.getXmlElement(SteelSheetPile, "InvalidLayerThickness2");
             
 
-            InvalidLayerThickness.InnerText = value.ToString()"E";
-            
-            // 
-            var CorrosionExcvT2 = helper.getXmlElement(SteelSheetPile", "CorrosionExcvT2");
+            InvalidLayerThickness2.InnerText = value.ToString("E");
             
 
-            CorrosionExcvT2.InnerText = value.ToString("E");
-            
-            // 
-            var CorrosionBackT1 = helper.getXmlElement(SteelSheetPile", "CorrosionBackT1");
-            
-
-            CorrosionBackT1.InnerText = value.ToString("E");
             
             
 

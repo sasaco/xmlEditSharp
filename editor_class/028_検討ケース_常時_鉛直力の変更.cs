@@ -34,13 +34,13 @@ namespace WindowsFormsApp1
 
             var Products = helper.getXmlElement(root, "Products");
             var WShut3 = helper.getXmlElement(Products, "WShut3");
-            var InputData = helper.getXmlElement(WShut3", "InputData");
+            var InputData = helper.getXmlElement(WShut3, "InputData");
             var WShutData = helper.getXmlElement(InputData, "WShutData");
             var CaseList = helper.getXmlElement(WShutData, "CaseList");
             var Case = helper.getXmlElement(CaseList, "Case");
             var LandSideN = helper.getXmlElement(Case, "LandSideN");
 
-            LandSideN = value.ToString("E");
+            LandSideN.InnerText = value.ToString("E");
 
         }
 

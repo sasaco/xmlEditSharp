@@ -21,7 +21,7 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             var xmlDoc = new XmlDocument();
-            xmlDoc.Load(@"data/master.xml");
+            xmlDoc.Load(@"data/master.f7n");
 
             editor_001.Edit(xmlDoc, 10.0);
             //editor_002.Edit(xmlDoc, 4.5);
@@ -95,7 +95,7 @@ namespace WindowsFormsApp1
             //editor_031.Edit(xmlDoc, 5.00000000000000E-001);
             //editor_032.Edit(xmlDoc, 1.00000000000000E+000);
 
-            xmlDoc.Save(@"../../data/edited.xml");
+            xmlDoc.Save(@"../../data/edited.f7n");
 
             MessageBox.Show("＼(^o^)／ｵﾜﾀ");
         }

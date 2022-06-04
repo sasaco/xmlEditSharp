@@ -76,36 +76,40 @@ namespace WindowsFormsApp1
             var Wall = helper.getXmlElement(WShutData, "Wall");
             var SteelSheetPile = helper.getXmlElement(Wall, "SteelSheetPile",2);
 
-            // 
-
-            var SideList = helper.getXmlElement(SteelSheetPile, "SideList");
-            var SteelSheetPileOneSide = helper.getXmlElement(SideList, "SteelSheetPileOneSide");
-            var InvalidLayerThickness = helper.getXmlElement(SteelSheetPile, "UseMaterials");
-            
-
-            EmbedmentSoilValue.InnerText = value.ToString();
-
 
             // 
-            var SideList = helper.getXmlElement(SteelSheetPile, "SideList");
-            var SteelSheetPileOneSide = helper.getXmlElement(SideList, "SteelSheetPileOneSide",1);
-            var InvalidLayerThickness = helper.getXmlElement(SteelSheetPile, "UseMaterials");
-            
+            var CorrosionExcvT2 = helper.getXmlElement(SteelSheetPile, "CorrosionExcvT2");
 
-            InvalidLayerThickness.InnerText = value.ToString("E");
-            
-            // 
-            var CorrosionExcvT2 = helper.getXmlElement(SteelSheetPile", "CorrosionExcvT2");
-            
 
             CorrosionExcvT2.InnerText = value.ToString();
-            
+
             // 
-            var CorrosionBackT1 = helper.getXmlElement(SteelSheetPile", "CorrosionBackT1");
-            
+            var CorrosionBackT1 = helper.getXmlElement(SteelSheetPile, "CorrosionBackT1");
+
 
             CorrosionBackT1.InnerText = value.ToString("E");
+
+
+            // 
+
+            var SideList = helper.getXmlElement(SteelSheetPile, "SideList");
+
+            //
+            var SteelSheetPileOneSide1 = helper.getXmlElement(SideList, "SteelSheetPileOneSide1");
+            var UseMaterials1 = helper.getXmlElement(SteelSheetPile, "UseMaterials1");
+
+
+            UseMaterials1.InnerText = value.ToString();
             
+
+            //
+            var SteelSheetPileOneSide2 = helper.getXmlElement(SideList, "SteelSheetPileOneSide2");
+            var UseMaterials2 = helper.getXmlElement(SteelSheetPile, "UseMaterials2");
+
+
+            UseMaterials2.InnerText = value.ToString("E");
+            
+
             
 
 
