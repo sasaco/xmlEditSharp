@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<Project xmlns="http://www.forum8.co.jp/uc1xml/2003/Project/" FileGUID="{907257D9-17CC-812D-55A5-23CAD25ADA51}">
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project xmlns="http://www.forum8.co.jp/uc1xml/2003/Project/" FileGUID="{CA035FE1-D296-209E-A4B6-ADB760F961D9}">
   <Properties>
     <ProductName>二重締切工の設計・3DCAD Ver.4</ProductName>
     <ProductVersion>
@@ -14,13 +14,13 @@
       <Release>0</Release>
       <Build>0</Build>
     </FileVersion>
-    <Comment/>
-    <Surface3D CompressType="_ctFlate" DumpType="_dpF8ASCII85x"/>
-    <ThumbNail CompressType="_ctFlate" DumpType="_dpF8ASCII85x"/>
-    <ImageList Count="0"/>
-    <Company/>
-    <SectionName/>
-    <Creator/>
+    <Comment />
+    <Surface3D CompressType="_ctFlate" DumpType="_dpF8ASCII85x" />
+    <ThumbNail CompressType="_ctFlate" DumpType="_dpF8ASCII85x" />
+    <ImageList Count="0" />
+    <Company />
+    <SectionName />
+    <Creator />
     <CreateDate>
       <Year>2022</Year>
       <Month>6</Month>
@@ -43,13 +43,13 @@
           <Release>0</Release>
           <Build>0</Build>
         </FileVersion>
-        <Comment/>
-        <Surface3D CompressType="_ctFlate" DumpType="_dpF8ASCII85x"/>
-        <ThumbNail CompressType="_ctFlate" DumpType="_dpF8ASCII85x"/>
-        <ImageList Count="0"/>
-        <Company/>
-        <SectionName/>
-        <Creator/>
+        <Comment />
+        <Surface3D CompressType="_ctFlate" DumpType="_dpF8ASCII85x" />
+        <ThumbNail CompressType="_ctFlate" DumpType="_dpF8ASCII85x" />
+        <ImageList Count="0" />
+        <Company />
+        <SectionName />
+        <Creator />
         <CreateDate>
           <Year>2022</Year>
           <Month>6</Month>
@@ -60,22 +60,22 @@
         <DataVersion>0</DataVersion>
         <CommonData>
           <StratumData>
-            <Address/>
+            <Address />
           </StratumData>
         </CommonData>
         <WShutData>
           <Init>
             <InitTitle>
-              <Title/>
-              <Comment/>
-              <BussinessTitle/>
-              <StructureTitle/>
-              <Seat/>
-              <ConstructionPlace/>
-              <Establishment/>
-              <Order/>
-              <Superviser/>
-              <MakeofDate/>
+              <Title />
+              <Comment />
+              <BussinessTitle />
+              <StructureTitle />
+              <Seat />
+              <ConstructionPlace />
+              <Establishment />
+              <Order />
+              <Superviser />
+              <MakeofDate />
             </InitTitle>
             <ManualType>0</ManualType>
             <WallType>_SteelSheetPile</WallType>
@@ -163,7 +163,7 @@
             <SameTierodPitch>False</SameTierodPitch>
           </Shape>
           <Basic>
-            <Title/>
+            <Title />
             <CofferdamLength>3.20000000000000E+001</CofferdamLength>
             <WallType>_SteelSheetPile</WallType>
             <GrestDamBody>5.50000000000000E+000</GrestDamBody>
@@ -206,16 +206,16 @@
             </LandsideSlope>
             <MakeSoilBoilingLog>False</MakeSoilBoilingLog>
             <InitTitle>
-              <Title/>
-              <Comment/>
-              <BussinessTitle/>
-              <StructureTitle/>
-              <Seat/>
-              <ConstructionPlace/>
-              <Establishment/>
-              <Order/>
-              <Superviser/>
-              <MakeofDate/>
+              <Title />
+              <Comment />
+              <BussinessTitle />
+              <StructureTitle />
+              <Seat />
+              <ConstructionPlace />
+              <Establishment />
+              <Order />
+              <Superviser />
+              <MakeofDate />
             </InitTitle>
             <ConsiderSlope>False</ConsiderSlope>
             <SlopeFormulaType>_Manual1</SlopeFormulaType>
@@ -339,7 +339,7 @@
             <Kexp>-2</Kexp>
             <ImpermeableLayerUpper>-1.00000000000000E+001</ImpermeableLayerUpper>
             <PumpDiameter>100</PumpDiameter>
-            <PumpName/>
+            <PumpName />
             <PumpingRate>1.00000000000000E+000</PumpingRate>
             <PumpingEfficiency>7.00000000000000E-001</PumpingEfficiency>
           </Displacement>
@@ -362,7 +362,7 @@
               <UnitWeight>7.70000000000000E+001</UnitWeight>
               <TableList>
                 <SteelSheetPileMaterialTable>
-                  <Name/>
+                  <Name />
                   <Normal>
                     <AllowableBendingStress>180</AllowableBendingStress>
                     <AllowableShearStress>83</AllowableShearStress>
@@ -373,7 +373,7 @@
                   </Earthquake>
                 </SteelSheetPileMaterialTable>
                 <SteelSheetPileMaterialTable>
-                  <Name/>
+                  <Name />
                   <Normal>
                     <AllowableBendingStress>235</AllowableBendingStress>
                     <AllowableShearStress>110</AllowableShearStress>
@@ -384,7 +384,7 @@
                   </Earthquake>
                 </SteelSheetPileMaterialTable>
                 <SteelSheetPileMaterialTable>
-                  <Name/>
+                  <Name />
                   <Normal>
                     <AllowableBendingStress>255</AllowableBendingStress>
                     <AllowableShearStress>150</AllowableShearStress>
@@ -401,7 +401,7 @@
               <UnitWeight>7.70000000000000E+001</UnitWeight>
               <TableList>
                 <SteelSheetPileMaterialTable>
-                  <Name/>
+                  <Name />
                   <Normal>
                     <AllowableBendingStress>144</AllowableBendingStress>
                     <AllowableShearStress>90</AllowableShearStress>
@@ -412,7 +412,7 @@
                   </Earthquake>
                 </SteelSheetPileMaterialTable>
                 <SteelSheetPileMaterialTable>
-                  <Name/>
+                  <Name />
                   <Normal>
                     <AllowableBendingStress>188</AllowableBendingStress>
                     <AllowableShearStress>117</AllowableShearStress>
@@ -429,7 +429,7 @@
               <UnitWeight>7.70000000000000E+001</UnitWeight>
               <TableList>
                 <SteelPipeSheetPileMaterialTable>
-                  <Name/>
+                  <Name />
                   <Normal>
                     <AllowableBendingStress>140</AllowableBendingStress>
                     <AllowableShearStress>80</AllowableShearStress>
@@ -440,7 +440,7 @@
                   </Earthquake>
                 </SteelPipeSheetPileMaterialTable>
                 <SteelPipeSheetPileMaterialTable>
-                  <Name/>
+                  <Name />
                   <Normal>
                     <AllowableBendingStress>185</AllowableBendingStress>
                     <AllowableShearStress>106</AllowableShearStress>
@@ -456,7 +456,7 @@
               <Youngsmodulus>2.00000000000000E+005</Youngsmodulus>
               <TableList>
                 <WalingMaterialTable>
-                  <Name/>
+                  <Name />
                   <Normal>
                     <AllowableBendingStress>140</AllowableBendingStress>
                   </Normal>
@@ -465,7 +465,7 @@
                   </Earthquake>
                 </WalingMaterialTable>
                 <WalingMaterialTable>
-                  <Name/>
+                  <Name />
                   <Normal>
                     <AllowableBendingStress>185</AllowableBendingStress>
                   </Normal>
@@ -780,7 +780,7 @@
           <StratumList>
             <Stratum>
               <eSoilInputType>_Thickness</eSoilInputType>
-              <Name/>
+              <Name />
               <Level>0.00000000000000E+000</Level>
               <LayerList>
                 <Layer>
@@ -800,11 +800,11 @@
                   <WallFrictionAngle_Layer>1.50000000000000E+001</WallFrictionAngle_Layer>
                 </Layer>
               </LayerList>
-              <ChangeKoList/>
+              <ChangeKoList />
             </Stratum>
             <Stratum>
               <eSoilInputType>_Thickness</eSoilInputType>
-              <Name/>
+              <Name />
               <Level>0.00000000000000E+000</Level>
               <LayerList>
                 <Layer>
@@ -824,11 +824,11 @@
                   <WallFrictionAngle_Layer>1.50000000000000E+001</WallFrictionAngle_Layer>
                 </Layer>
               </LayerList>
-              <ChangeKoList/>
+              <ChangeKoList />
             </Stratum>
             <Stratum>
               <eSoilInputType>_Thickness</eSoilInputType>
-              <Name/>
+              <Name />
               <Level>0.00000000000000E+000</Level>
               <LayerList>
                 <Layer>
@@ -848,7 +848,7 @@
                   <WallFrictionAngle_Layer>1.50000000000000E+001</WallFrictionAngle_Layer>
                 </Layer>
               </LayerList>
-              <ChangeKoList/>
+              <ChangeKoList />
             </Stratum>
           </StratumList>
           <CaseList>
@@ -868,21 +868,21 @@
               <LandSideQ>0.00000000000000E+000</LandSideQ>
               <LoadStab>
                 <ConcentratedLoadCnt>0</ConcentratedLoadCnt>
-                <ConcentratedLoadList/>
+                <ConcentratedLoadList />
                 <DistributedLoadCnt>0</DistributedLoadCnt>
-                <DistributedLoadList/>
+                <DistributedLoadList />
               </LoadStab>
               <LoadLandSide>
                 <ConcentratedLoadCnt>0</ConcentratedLoadCnt>
-                <ConcentratedLoadList/>
+                <ConcentratedLoadList />
                 <DistributedLoadCnt>0</DistributedLoadCnt>
-                <DistributedLoadList/>
+                <DistributedLoadList />
               </LoadLandSide>
               <LoadWaterSide>
                 <ConcentratedLoadCnt>0</ConcentratedLoadCnt>
-                <ConcentratedLoadList/>
+                <ConcentratedLoadList />
                 <DistributedLoadCnt>0</DistributedLoadCnt>
-                <DistributedLoadList/>
+                <DistributedLoadList />
               </LoadWaterSide>
               <LandSideN>0.00000000000000E+000</LandSideN>
               <WaterSideN>0.00000000000000E+000</WaterSideN>
@@ -913,21 +913,21 @@
               <LandSideQ>0.00000000000000E+000</LandSideQ>
               <LoadStab>
                 <ConcentratedLoadCnt>0</ConcentratedLoadCnt>
-                <ConcentratedLoadList/>
+                <ConcentratedLoadList />
                 <DistributedLoadCnt>0</DistributedLoadCnt>
-                <DistributedLoadList/>
+                <DistributedLoadList />
               </LoadStab>
               <LoadLandSide>
                 <ConcentratedLoadCnt>0</ConcentratedLoadCnt>
-                <ConcentratedLoadList/>
+                <ConcentratedLoadList />
                 <DistributedLoadCnt>0</DistributedLoadCnt>
-                <DistributedLoadList/>
+                <DistributedLoadList />
               </LoadLandSide>
               <LoadWaterSide>
                 <ConcentratedLoadCnt>0</ConcentratedLoadCnt>
-                <ConcentratedLoadList/>
+                <ConcentratedLoadList />
                 <DistributedLoadCnt>0</DistributedLoadCnt>
-                <DistributedLoadList/>
+                <DistributedLoadList />
               </LoadWaterSide>
               <LandSideN>0.00000000000000E+000</LandSideN>
               <WaterSideN>0.00000000000000E+000</WaterSideN>
@@ -2000,7 +2000,7 @@
           </Steel>
         </WShutData>
       </InputData>
-      <ResultData/>
+      <ResultData />
       <PillarShapedDiagramData>
         <InputFileHead>
           <FileVersion>10111</FileVersion>
@@ -2022,15 +2022,15 @@
         </InputState>
         <InputData>
           <DataName1>堤体１</DataName1>
-          <DataName2/>
-          <DataName3/>
-          <DataName4/>
-          <DataName5/>
-          <DataName6/>
-          <DataName7/>
-          <DataName8/>
-          <DataName9/>
-          <DataName10/>
+          <DataName2 />
+          <DataName3 />
+          <DataName4 />
+          <DataName5 />
+          <DataName6 />
+          <DataName7 />
+          <DataName8 />
+          <DataName9 />
+          <DataName10 />
           <DataNameUseExist1>True</DataNameUseExist1>
           <DataNameUseExist2>False</DataNameUseExist2>
           <DataNameUseExist3>False</DataNameUseExist3>
@@ -2052,8 +2052,8 @@
                 <Altitude>-30</Altitude>
                 <StratumThick>30</StratumThick>
                 <GroundQualityMark1>砂質土</GroundQualityMark1>
-                <GroundQualityMark2/>
-                <GroundQualityMark3/>
+                <GroundQualityMark2 />
+                <GroundQualityMark3 />
                 <GroundQualityName>砂質土</GroundQualityName>
                 <GroundQualityCharactorFormat>_CJZ_Charactor_level</GroundQualityCharactorFormat>
                 <ColorTone>灰色</ColorTone>
@@ -2072,8 +2072,8 @@
             <Depth0AppointExist>False</Depth0AppointExist>
             <Depth0No>1</Depth0No>
             <Depth0Rivise>0</Depth0Rivise>
-            <SamplingNameReserve1/>
-            <SamplingNameReserve2/>
+            <SamplingNameReserve1 />
+            <SamplingNameReserve2 />
           </Index>
         </AllData>
         <AllFormat>
@@ -2157,8 +2157,8 @@
               <LineWidth>2</LineWidth>
               <LineColor>7</LineColor>
             </SamplingLine>
-            <SamplingName1/>
-            <SamplingName2/>
+            <SamplingName1 />
+            <SamplingName2 />
             <FigureType>_CJZ_Decimal2</FigureType>
             <Scale>100</Scale>
             <ScalePSG>100</ScalePSG>
@@ -2247,8 +2247,8 @@
               <LineWidth>2</LineWidth>
               <LineColor>7</LineColor>
             </SamplingLine>
-            <SamplingName1/>
-            <SamplingName2/>
+            <SamplingName1 />
+            <SamplingName2 />
             <FigureType>_CJZ_Decimal2</FigureType>
             <Scale>100</Scale>
             <ScalePSG>100</ScalePSG>
@@ -2633,7 +2633,7 @@
                   <Color>0</Color>
                   <LineWidth>0</LineWidth>
                   <Style>[]</Style>
-                  <FontName/>
+                  <FontName />
                 </YCharacter>
                 <ZCharacter>
                   <Height>3.5</Height>
@@ -4252,7 +4252,7 @@
             <ReferenceNumber>_RN_Alphabet</ReferenceNumber>
             <LayoutFlg>True</LayoutFlg>
             <PlanTitle>仮設図</PlanTitle>
-            <TargetStrName/>
+            <TargetStrName />
             <ScaleD>100</ScaleD>
             <ScaleP>100</ScaleP>
           </CreateCondition>
@@ -4269,7 +4269,7 @@
               <ArrayItem Col="0">8</ArrayItem>
               <ArrayItem Col="1">2</ArrayItem>
             </TaiPosDepth>
-            <TaiQuality/>
+            <TaiQuality />
             <HaraokoshiType>_HT_C</HaraokoshiType>
             <WaterFlg>True</WaterFlg>
             <PillarDiagramFlg>False</PillarDiagramFlg>
@@ -4366,8 +4366,8 @@
           </Shape_Structure>
           <PlanCondition>
             <GroundPressure>クーロン</GroundPressure>
-            <WaterPressure>－－－－－</WaterPressure>
-            <OnWeight>[&quot;  0.00kN/m2&quot;]</OnWeight>
+            <WaterPressure>砂質土地盤</WaterPressure>
+            <OnWeight>["  0.00kN/m2"]</OnWeight>
             <InnerGround>砂質土</InnerGround>
           </PlanCondition>
           <QuantityCondition No="0">
@@ -4381,6 +4381,6 @@
       </DrawingCreationData>
     </WShut3>
   </Products>
-  <InputData/>
-  <ResultData/>
+  <InputData />
+  <ResultData />
 </Project>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<Project xmlns="http://www.forum8.co.jp/uc1xml/2003/Project/" FileGUID="{907257D9-17CC-812D-55A5-23CAD25ADA51}">
+<Project xmlns="http://www.forum8.co.jp/uc1xml/2003/Project/" FileGUID="{AE25BAAF-F139-6B09-37D7-6BC07516BFFA}">
   <Properties>
     <ProductName>二重締切工の設計・3DCAD Ver.4</ProductName>
     <ProductVersion>
@@ -23,8 +23,8 @@
     <Creator/>
     <CreateDate>
       <Year>2022</Year>
-      <Month>6</Month>
-      <Day>4</Day>
+      <Month>4</Month>
+      <Day>23</Day>
     </CreateDate>
   </Properties>
   <Products>
@@ -52,8 +52,8 @@
         <Creator/>
         <CreateDate>
           <Year>2022</Year>
-          <Month>6</Month>
-          <Day>4</Day>
+          <Month>4</Month>
+          <Day>23</Day>
         </CreateDate>
       </Properties>
       <InputData>
@@ -114,14 +114,14 @@
               </Layer>
             </LayerList>
             <FillStruct>
-              <SoilType>_Sandy</SoilType>
-              <NValue>1.20000000000000E+001</NValue>
-              <WetUnitWeight>1.80000000000000E+001</WetUnitWeight>
-              <SubmegedUnitWeight>9.00000000000000E+000</SubmegedUnitWeight>
-              <SaturationUnitWeight>1.90000000000000E+001</SaturationUnitWeight>
-              <FrictionAngle>3.00000000000000E+001</FrictionAngle>
-              <Cohesion>0.00000000000000E+000</Cohesion>
-              <CohesionCoefficient>0.00000000000000E+000</CohesionCoefficient>
+              <SoilType>_Clay</SoilType>
+              <NValue>1.10000000000000E+001</NValue>
+              <WetUnitWeight>1.70000000000000E+001</WetUnitWeight>
+              <SubmegedUnitWeight>8.00000000000000E+000</SubmegedUnitWeight>
+              <SaturationUnitWeight>1.80000000000000E+001</SaturationUnitWeight>
+              <FrictionAngle>2.50000000000000E+001</FrictionAngle>
+              <Cohesion>5.00000000000000E+000</Cohesion>
+              <CohesionCoefficient>5.00000000000000E-001</CohesionCoefficient>
               <ModulusOfDeformation>3.36000000000000E+004</ModulusOfDeformation>
               <WallFrictionAngle>1.50000000000000E+001</WallFrictionAngle>
               <WallFrictionAngle_Layer>0.00000000000000E+000</WallFrictionAngle_Layer>
@@ -183,14 +183,14 @@
             <EndBearingCondition>_Free</EndBearingCondition>
             <CalcPitch>_1m</CalcPitch>
             <FillStruct>
-              <SoilType>_Sandy</SoilType>
-              <NValue>1.20000000000000E+001</NValue>
-              <WetUnitWeight>1.80000000000000E+001</WetUnitWeight>
-              <SubmegedUnitWeight>9.00000000000000E+000</SubmegedUnitWeight>
-              <SaturationUnitWeight>1.90000000000000E+001</SaturationUnitWeight>
-              <FrictionAngle>3.00000000000000E+001</FrictionAngle>
-              <Cohesion>0.00000000000000E+000</Cohesion>
-              <CohesionCoefficient>0.00000000000000E+000</CohesionCoefficient>
+              <SoilType>_Clay</SoilType>
+              <NValue>1.10000000000000E+001</NValue>
+              <WetUnitWeight>1.70000000000000E+001</WetUnitWeight>
+              <SubmegedUnitWeight>8.00000000000000E+000</SubmegedUnitWeight>
+              <SaturationUnitWeight>1.80000000000000E+001</SaturationUnitWeight>
+              <FrictionAngle>2.50000000000000E+001</FrictionAngle>
+              <Cohesion>5.00000000000000E+000</Cohesion>
+              <CohesionCoefficient>5.00000000000000E-001</CohesionCoefficient>
               <ModulusOfDeformation>3.36000000000000E+004</ModulusOfDeformation>
               <WallFrictionAngle>1.50000000000000E+001</WallFrictionAngle>
               <WallFrictionAngle_Layer>0.00000000000000E+000</WallFrictionAngle_Layer>
@@ -273,8 +273,8 @@
               <DecaySpeedExcv>2.00000000000000E-002</DecaySpeedExcv>
               <DecaySpeedBack>1.50000000000000E-002</DecaySpeedBack>
               <DirectCorrosion>False</DirectCorrosion>
-              <CorrosionExcvT2>3.00000000000000E-001</CorrosionExcvT2>
-              <CorrosionBackT1>2.00000000000000E-002</CorrosionBackT1>
+              <CorrosionExcvT2>6.00000000000000E-001</CorrosionExcvT2>
+              <CorrosionBackT1>4.50000000000000E-001</CorrosionBackT1>
             </SteelSheetPile>
             <SteelPipeSheetPile>
               <SideList>
@@ -4368,7 +4368,7 @@
             <GroundPressure>クーロン</GroundPressure>
             <WaterPressure>－－－－－</WaterPressure>
             <OnWeight>[&quot;  0.00kN/m2&quot;]</OnWeight>
-            <InnerGround>砂質土</InnerGround>
+            <InnerGround>粘性土</InnerGround>
           </PlanCondition>
           <QuantityCondition No="0">
             <SmallNoCnt_m>3</SmallNoCnt_m>

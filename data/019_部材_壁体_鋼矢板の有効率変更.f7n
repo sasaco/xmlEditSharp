@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<Project xmlns="http://www.forum8.co.jp/uc1xml/2003/Project/" FileGUID="{907257D9-17CC-812D-55A5-23CAD25ADA51}">
+<Project xmlns="http://www.forum8.co.jp/uc1xml/2003/Project/" FileGUID="{910160D7-2166-1B7D-18F5-977CA4BF48ED}">
   <Properties>
     <ProductName>二重締切工の設計・3DCAD Ver.4</ProductName>
     <ProductVersion>
@@ -236,8 +236,8 @@
           </Basic>
           <Wall>
             <SteelSheetPile>
-              <MomentAlp>4.50000000000000E-001</MomentAlp>
-              <SectionModulusAlp>6.00000000000000E-001</SectionModulusAlp>
+              <MomentAlp>6.00000000000000E-001</MomentAlp>
+              <SectionModulusAlp>8.00000000000000E-001</SectionModulusAlp>
               <SideList>
                 <SteelSheetPileOneSide>
                   <UseSteelNo>2</UseSteelNo>

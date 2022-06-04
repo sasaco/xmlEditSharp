@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<Project xmlns="http://www.forum8.co.jp/uc1xml/2003/Project/" FileGUID="{907257D9-17CC-812D-55A5-23CAD25ADA51}">
+<Project xmlns="http://www.forum8.co.jp/uc1xml/2003/Project/" FileGUID="{ED7D8353-931D-0DD3-D629-9F06DFB1F2A3}">
   <Properties>
     <ProductName>二重締切工の設計・3DCAD Ver.4</ProductName>
     <ProductVersion>
@@ -23,8 +23,8 @@
     <Creator/>
     <CreateDate>
       <Year>2022</Year>
-      <Month>6</Month>
-      <Day>4</Day>
+      <Month>4</Month>
+      <Day>23</Day>
     </CreateDate>
   </Properties>
   <Products>
@@ -52,8 +52,8 @@
         <Creator/>
         <CreateDate>
           <Year>2022</Year>
-          <Month>6</Month>
-          <Day>4</Day>
+          <Month>4</Month>
+          <Day>23</Day>
         </CreateDate>
       </Properties>
       <InputData>
@@ -157,7 +157,7 @@
               </BodyData>
             </BodyDataList>
             <CalBodyNum>1</CalBodyNum>
-            <WaterSideLevel>5.50000000000000E+000</WaterSideLevel>
+            <WaterSideLevel>3.50000000000000E+000</WaterSideLevel>
             <FillLevel>5.10000000000000E+000</FillLevel>
             <LandSideLevel>5.50000000000000E+000</LandSideLevel>
             <SameTierodPitch>False</SameTierodPitch>
@@ -273,8 +273,8 @@
               <DecaySpeedExcv>2.00000000000000E-002</DecaySpeedExcv>
               <DecaySpeedBack>1.50000000000000E-002</DecaySpeedBack>
               <DirectCorrosion>False</DirectCorrosion>
-              <CorrosionExcvT2>3.00000000000000E-001</CorrosionExcvT2>
-              <CorrosionBackT1>2.00000000000000E-002</CorrosionBackT1>
+              <CorrosionExcvT2>6.00000000000000E-001</CorrosionExcvT2>
+              <CorrosionBackT1>4.50000000000000E-001</CorrosionBackT1>
             </SteelSheetPile>
             <SteelPipeSheetPile>
               <SideList>
@@ -4309,7 +4309,7 @@
                 </InSideWall>
                 <OutSideWall>
                   <Material>SY295</Material>
-                  <TopDepth>5.5</TopDepth>
+                  <TopDepth>3.5</TopDepth>
                   <Length>9</Length>
                   <SteelNo>2</SteelNo>
                   <LapPile>

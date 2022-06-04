@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<Project xmlns="http://www.forum8.co.jp/uc1xml/2003/Project/" FileGUID="{907257D9-17CC-812D-55A5-23CAD25ADA51}">
+<Project xmlns="http://www.forum8.co.jp/uc1xml/2003/Project/" FileGUID="{00A7E66E-CBC2-05E9-F48D-9B1F6DC358DA}">
   <Properties>
     <ProductName>二重締切工の設計・3DCAD Ver.4</ProductName>
     <ProductVersion>
@@ -323,14 +323,14 @@
               </Member>
               <Member>
                 <Level>5.00000000000000E-001</Level>
-                <Effective>False</Effective>
-                <Space>8.00000000000000E-001</Space>
-                <UseSteelDiameter>4.80000000000000E+001</UseSteelDiameter>
-                <UseMaterialNumber>2</UseMaterialNumber>
-                <UseMembers>1</UseMembers>
+                <Effective>True</Effective>
+                <Space>9.00000000000000E+000</Space>
+                <UseSteelDiameter>4.50000000000000E+001</UseSteelDiameter>
+                <UseMaterialNumber>1</UseMaterialNumber>
+                <UseMembers>2</UseMembers>
                 <InputTensionSpring>False</InputTensionSpring>
-                <SpringConstant>1.00000000000000E+000</SpringConstant>
-                <WalingMaterials>_SS400</WalingMaterials>
+                <SpringConstant>2.00000000000000E+000</SpringConstant>
+                <WalingMaterials>_SM490</WalingMaterials>
               </Member>
             </MemberList>
           </TensionMember>
@@ -4348,11 +4348,11 @@
                       <RegulateCntS>0</RegulateCntS>
                       <RegulateAreaE>0</RegulateAreaE>
                       <RegulateCntE>0</RegulateCntE>
-                      <Deameter>48</Deameter>
+                      <Deameter>45</Deameter>
                       <BundleCnt>0</BundleCnt>
-                      <TaiMaterial>SS400（＞40mm）</TaiMaterial>
+                      <TaiMaterial>SS400（＜40mm）</TaiMaterial>
                       <HaraokoshiSteelNo>1</HaraokoshiSteelNo>
-                      <HaraokoshiMaterial>SS400</HaraokoshiMaterial>
+                      <HaraokoshiMaterial>SM490</HaraokoshiMaterial>
                     </Index>
                   </TaiUnit>
                 </Tai>

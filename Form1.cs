@@ -23,7 +23,7 @@ namespace WindowsFormsApp1
             var xmlDoc = new XmlDocument();
             xmlDoc.Load(@"data/master.f7n");
 
-            editor_001.Edit(xmlDoc, 10.0);
+            /editor_001.Edit(xmlDoc, 10.0);
             //editor_002.Edit(xmlDoc, 4.5);
             //editor_003.Edit(xmlDoc, 3.5);
             //editor_004.Edit(xmlDoc, 3.5);
@@ -81,7 +81,7 @@ namespace WindowsFormsApp1
             //    3.00000000000000E+004
             //    );
             //editor_019.Edit(xmlDoc, 6.00000000000000E-001, 8.00000000000000E-001);
-            //editor_020.Edit(xmlDoc, 4);
+            editor_020.Edit(xmlDoc, 4);
             //editor_021.Edit(xmlDoc, "_SY390");
             //editor_022.Edit(xmlDoc, "_Sandy");
             //editor_023.Edit(xmlDoc, 5.00000000000000E+000);

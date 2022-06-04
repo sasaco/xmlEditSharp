@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<Project xmlns="http://www.forum8.co.jp/uc1xml/2003/Project/" FileGUID="{907257D9-17CC-812D-55A5-23CAD25ADA51}">
+<Project xmlns="http://www.forum8.co.jp/uc1xml/2003/Project/" FileGUID="{634DF615-0BCA-D04F-D2DE-8A5AFC942642}">
   <Properties>
     <ProductName>二重締切工の設計・3DCAD Ver.4</ProductName>
     <ProductVersion>
@@ -884,7 +884,7 @@
                 <DistributedLoadCnt>0</DistributedLoadCnt>
                 <DistributedLoadList/>
               </LoadWaterSide>
-              <LandSideN>0.00000000000000E+000</LandSideN>
+              <LandSideN>1.00000000000000E+000</LandSideN>
               <WaterSideN>0.00000000000000E+000</WaterSideN>
               <DesigneSeismicCoefficient>1.00000000000000E-001</DesigneSeismicCoefficient>
               <ApparentKhMethod>_Kasen</ApparentKhMethod>

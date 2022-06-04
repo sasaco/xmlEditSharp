@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<Project xmlns="http://www.forum8.co.jp/uc1xml/2003/Project/" FileGUID="{907257D9-17CC-812D-55A5-23CAD25ADA51}">
+<Project xmlns="http://www.forum8.co.jp/uc1xml/2003/Project/" FileGUID="{FB13AD61-C525-25C3-BB1F-B813356B92AE}">
   <Properties>
     <ProductName>二重締切工の設計・3DCAD Ver.4</ProductName>
     <ProductVersion>
@@ -855,8 +855,8 @@
             <Case>
               <State>_Normal</State>
               <Name>常時</Name>
-              <LandsideHWL>4.60000000000000E+000</LandsideHWL>
-              <LandsideLWL>0.00000000000000E+000</LandsideLWL>
+              <LandsideHWL>5.00000000000000E+000</LandsideHWL>
+              <LandsideLWL>1.00000000000000E+000</LandsideLWL>
               <WatersideRWL>0.00000000000000E+000</WatersideRWL>
               <WatersideLWL>0.00000000000000E+000</WatersideLWL>
               <Qload>0.00000000000000E+000</Qload>
@@ -4357,9 +4357,9 @@
                   </TaiUnit>
                 </Tai>
                 <WaterDepth>
-                  <InSide>0</InSide>
-                  <OutSide>4.6</OutSide>
-                  <Between>2.3</Between>
+                  <InSide>1</InSide>
+                  <OutSide>5</OutSide>
+                  <Between>3</Between>
                 </WaterDepth>
               </Index>
             </StructureUnit>

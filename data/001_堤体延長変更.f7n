@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<Project xmlns="http://www.forum8.co.jp/uc1xml/2003/Project/" FileGUID="{907257D9-17CC-812D-55A5-23CAD25ADA51}">
+<Project xmlns="http://www.forum8.co.jp/uc1xml/2003/Project/" FileGUID="{052DB2EB-AB31-B153-B8ED-5FAD79400C79}">
   <Properties>
     <ProductName>二重締切工の設計・3DCAD Ver.4</ProductName>
     <ProductVersion>
@@ -131,7 +131,7 @@
           </Init>
           <Shape>
             <DamNum>1</DamNum>
-            <CofferdamLength>3.20000000000000E+001</CofferdamLength>
+            <CofferdamLength>1.00000000000000E+001</CofferdamLength>
             <BodyDirection>_Vertical</BodyDirection>
             <BodyDataList>
               <BodyData>
@@ -4279,7 +4279,7 @@
             <PlaneUnit>
               <Index No="0">
                 <Sita>90</Sita>
-                <Width>32</Width>
+                <Width>10</Width>
                 <Between>5.5</Between>
               </Index>
             </PlaneUnit>

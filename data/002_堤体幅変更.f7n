@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<Project xmlns="http://www.forum8.co.jp/uc1xml/2003/Project/" FileGUID="{907257D9-17CC-812D-55A5-23CAD25ADA51}">
+<Project xmlns="http://www.forum8.co.jp/uc1xml/2003/Project/" FileGUID="{2DD8AE78-030B-C669-4B23-AF1F7CE24147}">
   <Properties>
     <ProductName>二重締切工の設計・3DCAD Ver.4</ProductName>
     <ProductVersion>
@@ -23,8 +23,8 @@
     <Creator/>
     <CreateDate>
       <Year>2022</Year>
-      <Month>6</Month>
-      <Day>4</Day>
+      <Month>4</Month>
+      <Day>23</Day>
     </CreateDate>
   </Properties>
   <Products>
@@ -52,8 +52,8 @@
         <Creator/>
         <CreateDate>
           <Year>2022</Year>
-          <Month>6</Month>
-          <Day>4</Day>
+          <Month>4</Month>
+          <Day>23</Day>
         </CreateDate>
       </Properties>
       <InputData>
@@ -273,8 +273,8 @@
               <DecaySpeedExcv>2.00000000000000E-002</DecaySpeedExcv>
               <DecaySpeedBack>1.50000000000000E-002</DecaySpeedBack>
               <DirectCorrosion>False</DirectCorrosion>
-              <CorrosionExcvT2>3.00000000000000E-001</CorrosionExcvT2>
-              <CorrosionBackT1>2.00000000000000E-002</CorrosionBackT1>
+              <CorrosionExcvT2>6.00000000000000E-001</CorrosionExcvT2>
+              <CorrosionBackT1>4.50000000000000E-001</CorrosionBackT1>
             </SteelSheetPile>
             <SteelPipeSheetPile>
               <SideList>
@@ -944,7 +944,7 @@
             </Case>
           </CaseList>
           <Decision>
-            <DamBodyWidth>5.50000000000000E+000</DamBodyWidth>
+            <DamBodyWidth>4.50000000000000E+000</DamBodyWidth>
             <LandSideLength>9.00000000000000E+000</LandSideLength>
             <WaterSideLength>9.00000000000000E+000</WaterSideLength>
             <WalingList>
@@ -4280,7 +4280,7 @@
               <Index No="0">
                 <Sita>90</Sita>
                 <Width>32</Width>
-                <Between>5.5</Between>
+                <Between>4.5</Between>
               </Index>
             </PlaneUnit>
             <SectionFlg>

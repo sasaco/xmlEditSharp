@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<Project xmlns="http://www.forum8.co.jp/uc1xml/2003/Project/" FileGUID="{907257D9-17CC-812D-55A5-23CAD25ADA51}">
+<Project xmlns="http://www.forum8.co.jp/uc1xml/2003/Project/" FileGUID="{A3691837-FE99-94C2-301D-F70D076CA56F}">
   <Properties>
     <ProductName>二重締切工の設計・3DCAD Ver.4</ProductName>
     <ProductVersion>
@@ -241,7 +241,7 @@
               <SideList>
                 <SteelSheetPileOneSide>
                   <UseSteelNo>2</UseSteelNo>
-                  <UseMaterials>_SY295</UseMaterials>
+                  <UseMaterials>_SY390</UseMaterials>
                   <InvalidLayerThickness>0.00000000000000E+000</InvalidLayerThickness>
                   <EmbedmentSoilValue>_Sandy</EmbedmentSoilValue>
                   <VerticalForce>0.00000000000000E+000</VerticalForce>
@@ -251,7 +251,7 @@
                 </SteelSheetPileOneSide>
                 <SteelSheetPileOneSide>
                   <UseSteelNo>2</UseSteelNo>
-                  <UseMaterials>_SY295</UseMaterials>
+                  <UseMaterials>_SY390</UseMaterials>
                   <InvalidLayerThickness>0.00000000000000E+000</InvalidLayerThickness>
                   <EmbedmentSoilValue>_Sandy</EmbedmentSoilValue>
                   <VerticalForce>0.00000000000000E+000</VerticalForce>
@@ -4296,7 +4296,7 @@
             <StructureUnit>
               <Index No="0">
                 <InSideWall>
-                  <Material>SY295</Material>
+                  <Material>SY390</Material>
                   <TopDepth>5.5</TopDepth>
                   <Length>9</Length>
                   <SteelNo>2</SteelNo>
@@ -4308,7 +4308,7 @@
                   </LapPile>
                 </InSideWall>
                 <OutSideWall>
-                  <Material>SY295</Material>
+                  <Material>SY390</Material>
                   <TopDepth>5.5</TopDepth>
                   <Length>9</Length>
                   <SteelNo>2</SteelNo>

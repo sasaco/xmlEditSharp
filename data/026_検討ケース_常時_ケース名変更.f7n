@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<Project xmlns="http://www.forum8.co.jp/uc1xml/2003/Project/" FileGUID="{907257D9-17CC-812D-55A5-23CAD25ADA51}">
+<Project xmlns="http://www.forum8.co.jp/uc1xml/2003/Project/" FileGUID="{1F8A3152-DE6A-2E92-95AE-0FF0FF2D0F73}">
   <Properties>
     <ProductName>二重締切工の設計・3DCAD Ver.4</ProductName>
     <ProductVersion>
@@ -854,7 +854,7 @@
           <CaseList>
             <Case>
               <State>_Normal</State>
-              <Name>常時</Name>
+              <Name>高水位時</Name>
               <LandsideHWL>4.60000000000000E+000</LandsideHWL>
               <LandsideLWL>0.00000000000000E+000</LandsideLWL>
               <WatersideRWL>0.00000000000000E+000</WatersideRWL>

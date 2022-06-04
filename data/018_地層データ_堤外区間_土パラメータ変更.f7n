@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<Project xmlns="http://www.forum8.co.jp/uc1xml/2003/Project/" FileGUID="{907257D9-17CC-812D-55A5-23CAD25ADA51}">
+<Project xmlns="http://www.forum8.co.jp/uc1xml/2003/Project/" FileGUID="{1DE9CE9F-A322-1803-E928-48132CBACA11}">
   <Properties>
     <ProductName>二重締切工の設計・3DCAD Ver.4</ProductName>
     <ProductVersion>
@@ -23,8 +23,8 @@
     <Creator/>
     <CreateDate>
       <Year>2022</Year>
-      <Month>6</Month>
-      <Day>4</Day>
+      <Month>4</Month>
+      <Day>23</Day>
     </CreateDate>
   </Properties>
   <Products>
@@ -52,8 +52,8 @@
         <Creator/>
         <CreateDate>
           <Year>2022</Year>
-          <Month>6</Month>
-          <Day>4</Day>
+          <Month>4</Month>
+          <Day>23</Day>
         </CreateDate>
       </Properties>
       <InputData>
@@ -273,8 +273,8 @@
               <DecaySpeedExcv>2.00000000000000E-002</DecaySpeedExcv>
               <DecaySpeedBack>1.50000000000000E-002</DecaySpeedBack>
               <DirectCorrosion>False</DirectCorrosion>
-              <CorrosionExcvT2>3.00000000000000E-001</CorrosionExcvT2>
-              <CorrosionBackT1>2.00000000000000E-002</CorrosionBackT1>
+              <CorrosionExcvT2>6.00000000000000E-001</CorrosionExcvT2>
+              <CorrosionBackT1>4.50000000000000E-001</CorrosionBackT1>
             </SteelSheetPile>
             <SteelPipeSheetPile>
               <SideList>
@@ -832,16 +832,16 @@
               <Level>0.00000000000000E+000</Level>
               <LayerList>
                 <Layer>
-                  <Thickness>1.50000000000000E+001</Thickness>
-                  <SoilType>_Sandy</SoilType>
-                  <Nvalue>1.20000000000000E+001</Nvalue>
-                  <WetUnitWeight>1.80000000000000E+001</WetUnitWeight>
-                  <SubmergedUnitWeight>9.00000000000000E+000</SubmergedUnitWeight>
-                  <SaturationUnitWeight>1.90000000000000E+001</SaturationUnitWeight>
-                  <FrictionAngle>3.00000000000000E+001</FrictionAngle>
-                  <Cohesion>0.00000000000000E+000</Cohesion>
-                  <CohesionCoefficient>0.00000000000000E+000</CohesionCoefficient>
-                  <ModulusOfDeformation>3.36000000000000E+004</ModulusOfDeformation>
+                  <Thickness>1.40000000000000E+001</Thickness>
+                  <SoilType>_Clay</SoilType>
+                  <Nvalue>1.10000000000000E+001</Nvalue>
+                  <WetUnitWeight>1.70000000000000E+001</WetUnitWeight>
+                  <SubmergedUnitWeight>8.00000000000000E+000</SubmergedUnitWeight>
+                  <SaturationUnitWeight>1.80000000000000E+001</SaturationUnitWeight>
+                  <FrictionAngle>2.50000000000000E+001</FrictionAngle>
+                  <Cohesion>5.00000000000000E-001</Cohesion>
+                  <CohesionCoefficient>5.00000000000000E-001</CohesionCoefficient>
+                  <ModulusOfDeformation>3.00000000000000E+004</ModulusOfDeformation>
                   <InputCoefficientSubgrade>1.00000000000000E+000</InputCoefficientSubgrade>
                   <LiquefactionResistanceRate>1.30000000000000E+000</LiquefactionResistanceRate>
                   <WallFrictionAngle>1.50000000000000E+001</WallFrictionAngle>

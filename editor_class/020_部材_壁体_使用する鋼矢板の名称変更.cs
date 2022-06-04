@@ -33,8 +33,8 @@ namespace WindowsFormsApp1
         /// </summary>
         /// <param name="xmlDoc">変更する対象</param>
         /// <param name="value">新しい値</param>
-        static public void Edit(XmlDocument xmlDoc, int _UseSteelNo,
-            double _CorrosionBackT1, double _CorrosionExcvT2)
+        static public void Edit(XmlDocument xmlDoc, int _UseSteelNo)
+            //, double _CorrosionBackT1, double _CorrosionExcvT2)
         {
             XmlElement root = xmlDoc.DocumentElement;
 
@@ -53,11 +53,11 @@ namespace WindowsFormsApp1
             }
 
 
-            var CorrosionBackT1 = helper.getXmlElement(SteelSheetPile, "CorrosionBackT1");
-            var CorrosionExcvT2 = helper.getXmlElement(SteelSheetPile, "CorrosionExcvT2");
+            //var CorrosionBackT1 = helper.getXmlElement(SteelSheetPile, "CorrosionBackT1");
+            //var CorrosionExcvT2 = helper.getXmlElement(SteelSheetPile, "CorrosionExcvT2");
 
-            CorrosionBackT1.InnerText = _CorrosionBackT1.ToString("E");
-            CorrosionExcvT2.InnerText = _CorrosionExcvT2.ToString("E");
+            //CorrosionBackT1.InnerText = _CorrosionBackT1.ToString("E");
+            //CorrosionExcvT2.InnerText = _CorrosionExcvT2.ToString("E");
 
         }
 
