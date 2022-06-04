@@ -20,9 +20,17 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //コントロールを初期化する
+            ProgressBar1.Minimum = 0;
+            ProgressBar1.Maximum = 10000;
+            ProgressBar1.Value = 0;
+
             var xmlDoc = new XmlDocument();
-            for(int i = 0; i < 1; ++i)
+            for(int i = ProgressBar1.Minimum; i < ProgressBar1.Maximum+1; ++i)
             {
+                ProgressBar1.Value = i;
+                Label1.Text = string.Format("データ生成中{0}/{1}", ProgressBar1.Value + 1, ProgressBar1.Maximum);
+
                 xmlDoc.Load(@"data/master.f7n");
 
                 Random r1 = new System.Random();
@@ -277,7 +285,7 @@ namespace WindowsFormsApp1
                 xmlDoc.Save(filename);
             }
 
-
+            Label1.Text = "完了しました。";
             MessageBox.Show("＼(^o^)／ｵﾜﾀ");
         }
 
