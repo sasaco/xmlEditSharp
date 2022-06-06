@@ -247,7 +247,7 @@ namespace WindowsFormsApp1
 
                 // 1段目
                 // 使用鋼材直径
-                var param301 = r1.Next(10, 51);
+                var param301 = r1.Next(25, 91);
                                               // 
                 // 使用材料番号 
                 int[] _No;
@@ -278,7 +278,7 @@ namespace WindowsFormsApp1
                 var param303 = r1.Next(0, 2);
                 var w1 = _WALE[param303];
 
-                var param304 = r1.Next(1, 6); // 使用本数  1 ～ 5,
+                var param304 = r1.Next(1, 3); // 使用本数  1 ～ 2,
 
                 editor_024.Edit(xmlDoc, false,                  // 引張バネ無効
                                         param008,               // 設置間隔
@@ -296,7 +296,7 @@ namespace WindowsFormsApp1
 
                 // 2段目
                 // 使用鋼材直径
-                var param311 = r1.Next(10, 51);
+                var param311 = r1.Next(25, 91);
 
                 // 使用材料番号 
                 if (param311 < 40)
@@ -325,7 +325,7 @@ namespace WindowsFormsApp1
                 //param303 = r1.Next(0, 2); // 1段目と同じ
                 //w1 = _WALE[param303];     // 1段目と同じ
 
-                var param314 = r1.Next(1, 6); // 使用本数  1 ～ 5,
+                var param314 = r1.Next(1, 3); // 使用本数  1 ～ 2,
 
                 editor_025.Edit(xmlDoc, false,                  // 引張バネ無効
                                         param010,                // 設置間隔
@@ -350,10 +350,11 @@ namespace WindowsFormsApp1
                     Convert.ToInt32(min_h10 * 10), 
                     Convert.ToInt32(param003 * 10)
                     )) / 10;
-                // 堤内側水位 0m ～ 壁体高さ
+
+                // 堤内側水位 0m ～ 堤内区間地表面（現地盤）高G.L.
                 var param402 = Convert.ToDouble(r1.Next(
                     0, 
-                    Convert.ToInt32(param003 * 10)
+                    Convert.ToInt32(param007 * 10)
                     )) / 10;
 
                 editor_027.Edit(xmlDoc,  param401, param402);
@@ -374,10 +375,10 @@ namespace WindowsFormsApp1
                     Convert.ToInt32(param003 * 10)
                     )) / 10;
 
-                // 堤内側水位 0m ～ 壁体高さ
+                // 堤内側水位 0m ～ 堤内区間地表面（現地盤）高G.L.
                 var param412 = Convert.ToDouble(r1.Next(
                     0,
-                    Convert.ToInt32(param003 * 10)
+                    Convert.ToInt32(param007 * 10)
                     )) / 10;
 
                 editor_030.Edit(xmlDoc, param411, param412);
@@ -447,7 +448,8 @@ namespace WindowsFormsApp1
 
 
             // リストの内容をファイル（CSV)に書き込む（上書き）
-            File.WriteAllLines(@"Z:/inputdata.csv", this.csvList, Encoding.GetEncoding("shift-jis"));
+            var csvFileName = string.Format("Z:/input{0}-{1}.csv", ProgressBar1.Minimum, ProgressBar1.Maximum);
+            File.WriteAllLines(csvFileName, this.csvList, Encoding.GetEncoding("shift-jis"));
 
 
             Label1.Text = "完了しました。";
