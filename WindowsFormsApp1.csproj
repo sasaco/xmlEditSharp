@@ -48,7 +48,7 @@
   <ItemGroup>
     <Compile Include="editor_class\010_引張材平面配置_標準ピッチ上段変更.cs" />
     <Compile Include="editor_class\019_部材_壁体_鋼矢板の有効率変更.cs" />
-    <Compile Include="editor_class\018_地層データ_堤外区間_土パラメータ変更.cs" />
+    <Compile Include="editor_class\018_地層データ_堤内区間_土パラメータ変更.cs" />
     <Compile Include="editor_class\017_地層データ_堤内区間_地表面高変更.cs" />
     <Compile Include="editor_class\016_地層データ_堤体区間_土パラメータ変更.cs" />
     <Compile Include="editor_class\015_地層データ_堤体区間_中詰土パラメータ変更.cs" />

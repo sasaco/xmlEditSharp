@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,9 +14,61 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
+        private List<string> csvList;
+
         public Form1()
         {
             InitializeComponent();
+
+            csvList = new List<string>();
+            csvList.Add(
+                "No, " +
+                "param001, " +
+                "param002, " +
+                "param003, " +
+                "param004, " +
+                "param005, " +
+                "param006, " +
+                "param007, " +
+
+                // 引張材
+                "param008, " +
+                "param009, " +
+                "param010, " +
+                "param011, " +
+
+                // 地層データ
+                "param101, " +
+                "param102, " +
+                "param103, " +
+                "param104, " +
+                "param105, " +
+                "param106, " +
+                "param111, " +
+                "param112, " +
+                "param113, " +
+                "param114, " +
+                "param115, " +
+                "param116, " +
+
+                // 使用する矢板
+                "param201, " +
+                "param202, " +
+                "param301, " +
+                "param302, " +
+                "param303, " +
+                "param304, " +
+                "param311, " +
+                "param314, " +
+                // 水位
+                "param401, " +
+                "param402, " +
+                "param411, " +
+                "param412, " +
+
+                //震度
+                "param501"
+            );
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -37,147 +90,176 @@ namespace WindowsFormsApp1
 
                 // 堤体
                 var param001 = r1.Next(10, 31); // 堤体延長
-                editor_001.Edit(xmlDoc, param001);       
+                editor_001.Edit(xmlDoc, param001);
 
-                editor_002.Edit(xmlDoc, Convert.ToDouble(r1.Next(10, 201)) / 10);   // 堤体幅 1m～20m
+                var param002 = Convert.ToDouble(r1.Next(10, 141)) / 10;
+                editor_002.Edit(xmlDoc, param002);   // 堤体幅 1m～14m
+
+
+                var param003 = Convert.ToDouble(r1.Next(20, 101)) / 10;             // 壁体高さ 2m～10m
+                var param004 = param003 + Convert.ToDouble(r1.Next(5, 101)) / 10;   // 矢板の全長 壁体高さ + 0.5m～ 10m
 
                 // 堤内側矢板天端高さ
-                var param003 = Convert.ToDouble(r1.Next(20, 101)) / 10; // 高さ 1m～10m
-                var param004 = param003;
-                editor_003.Edit(xmlDoc, param003, param004 + Convert.ToDouble(r1.Next(10, 101)) / 10);
-
+                editor_003.Edit(xmlDoc, param003, param004);
                 // 堤外側矢板天端高さ
-                editor_004.Edit(xmlDoc, param003, param004 + Convert.ToDouble(r1.Next(10, 101)) / 10);
+                editor_004.Edit(xmlDoc, param003, param004);
 
                 // 中詰土天端高さ
                 var param005 = param003 - 0.1;//堤内側と堤外側の低い方
                 editor_005.Edit(xmlDoc, param005);
 
+
                 // 堤外区間地表面（現地盤）高G.L.
-                var h_out = Convert.ToDouble(r1.Next(0, Convert.ToInt32(param005 * 10))) / 10; // 0m ～ 中詰土天端高さ
+                var param006 = Convert.ToDouble(r1.Next(0, Math.Max(Convert.ToInt32((param005 - 1) * 10), 0))) / 10;  // 0m ～ 中詰土天端高さ-1m
                 // 堤内区間地表面（現地盤）高G.L.
-                var h_in = Convert.ToDouble(r1.Next(0, Convert.ToInt32(param005 * 10))) / 10; // 0m ～ 中詰土天端高さ
+                var param007 = Convert.ToDouble(r1.Next(0, Math.Max(Convert.ToInt32((param005 - 1) * 10), 0))) / 10;  // 0m ～ 中詰土天端高さ-1m
+                // どっちかは、0m ～ 中詰土天端高さの1/3 にする
+                if (r1.Next(0, 2) == 0)
+                    param006 = Convert.ToDouble(r1.Next(0, Convert.ToInt32(param005 * 3))) / 10;
+                else
+                    param007 = Convert.ToDouble(r1.Next(0, Convert.ToInt32(param005 * 3))) / 10;
+
+                // 堤外区間地表面（現地盤）高G.L.
+                editor_012.Edit(xmlDoc, param006);
+                // 堤内区間地表面（現地盤）高G.L.
+                editor_017.Edit(xmlDoc, param007);
+
 
                 // 引張材
-                var min_h10 = Math.Max(h_out, h_in) + 0.1;
+                var min_h10 = Math.Max(param006, param007);
                 // 1段目
-                var pich_10 = Convert.ToDouble(r1.Next(2, param001 * 5 + 1)) / 10;                      // 上段ピッチ 0.2m～堤体延長/2
-                var depth10 = Convert.ToDouble(r1.Next(Convert.ToInt32(min_h10 * 10), Convert.ToInt32(param005 * 10))) / 10;    // 上段深さ   0.2m～矢板天端高さ
-                editor_010.Edit(xmlDoc, pich_10,
-                                        depth10);
+                var param008 = Convert.ToDouble(r1.Next(2, param001 * 5 + 1)) / 10;     // 上段ピッチ 0.2m～堤体延長/2
+                var param009 = Convert.ToDouble(r1.Next(                                // 地表面（現地盤）+ 0.2m ～ 矢板天端高さ - 0.2
+                    Convert.ToInt32((min_h10 + 0.2) * 10), 
+                    Convert.ToInt32((param005 - 0.2) * 10)
+                    )) / 10;    
+                editor_010.Edit(xmlDoc, param008,
+                                        param009);
+
                 // 2段目
-                var pich_11 = Convert.ToDouble(r1.Next(2, param001 * 5 + 1)) / 10;                      // 下段ピッチ 0.2m～堤体延長/2
-                var depth11 = Convert.ToDouble(r1.Next(Convert.ToInt32(min_h10 * 10), Convert.ToInt32(depth10 * 10))) / 10;     // 下段深さ   0.2m～矢板天端高さ
-                editor_011.Edit(xmlDoc, pich_11,
-                                        depth11);
+                var param010 = Convert.ToDouble(r1.Next(2, param001 * 5 + 1)) / 10;     // 下段ピッチ 0.2m～堤体延長/2
+                var param011 = Convert.ToDouble(r1.Next(                                // 地表面（現地盤）+ 0.1m ～ 上段深さ - 0.1
+                    Convert.ToInt32((min_h10 + 0.1) * 10), 
+                    Convert.ToInt32((param009 - 0.1) * 10)
+                    )) / 10;           
+                editor_011.Edit(xmlDoc, param010,
+                                        param011);
 
                 // 地層データ
-                // 堤外区間地表面（現地盤）高G.L.
-                editor_012.Edit(xmlDoc, h_out);  
-
-                // 堤外区間 土質条件
                 string[] soil_jp = new string[2] { "粘性土", "砂質土" };
                 string[] soil_en = new string[2] { "_Clay", "_Sandy" };
-                int r = r1.Next(11, 21);        // 土の湿潤重量 11 ～ 20
+                // 堤外区間 土質条件
+                int param101 = r1.Next(11, 21);         // 土の湿潤重量 11 ～ 20
+                var param102 = soil_en[r1.Next(0, 2)];  // 土質
+                var param103 = r1.Next(0, 51);          // 平均N値 0 ～ 50
+                var param104 = r1.Next(1, 46);          // 内部摩擦角 1 ～ 45°
+                var param105 = r1.Next(0, 300);         // 粘着力 0 ～ 300
+                var param106 = r1.Next(10, 2000) * 100; // 変形係数 1000 ～ 200000
 
                 editor_013.Edit(xmlDoc,
-                    20,                        // 層厚 100m(固定
-                    soil_en[r1.Next(0, 2)],     // 土質
-                    r1.Next(0, 51),             // 平均N値 0 ～ 50
-                    r,                          // 土の湿潤重量
-                    r - 10,                     // 土の水中重量
-                    r + 1,                      // 土の飽和重量
-                    r1.Next(1, 46),             // 内部摩擦角 1 ～ 45°
-                    r1.Next(0, 1000),           // 粘着力 0 ～ 1000
-                    0,                          // 粘着力 増分 0
-                    r1.Next(10, 2000) * 100       // 変形係数 1000 ～ 200000
+                    20,             // 層厚 20m(固定
+                    param102,       // 土質
+                    param103,       // 平均N値 0 ～ 50
+                    param101,       // 土の湿潤重量
+                    param101 - 10,  // 土の水中重量
+                    param101 + 1,   // 土の飽和重量
+                    param104,       // 内部摩擦角 1 ～ 45°
+                    param105,       // 粘着力 0 ～ 1000
+                    0,              // 粘着力 増分 0
+                    param106        // 変形係数 1000 ～ 200000
                     );
 
-                // 堤内区間地表面（現地盤）高G.L.
-                //editor_014.Edit(xmlDoc, r1.Next(0, param005 * 10) / 10);  // 0m ～ 中詰土端高さ
-                editor_014.Edit(xmlDoc, 0);  // 中詰土端高さ-0.1m
+                // 堤体区間地表面（現地盤）高G.L.
+                editor_014.Edit(xmlDoc, 0);  // 中詰土端高さ = 0m
 
-                // 堤内区間 中詰め 土質条件
+                // 中詰め 土質条件
                 int soil_index = r1.Next(0, 2);
-                r = r1.Next(11, 21);            // 土の湿潤重量 11 ～ 20
+
+                int param111 = r1.Next(11, 21);             // 土の湿潤重量 11 ～ 20
+                var param112 = soil_jp[soil_index];         // 土質
+                var param113 = soil_en[soil_index];         // 土質
+                var param114 = r1.Next(0, 51);              // 平均N値 0 ～ 50
+                var param115 = r1.Next(1, 46);              // 内部摩擦角 1 ～ 45°
+                var param116 = r1.Next(0, 300);             // 粘着力 0 ～ 300
+
                 editor_015.Edit(xmlDoc,
                     soil_jp[soil_index],
                     soil_en[soil_index],
-                    r1.Next(0, 51),             // 平均N値 0 ～ 50
-                    r,                          // 土の湿潤重量
-                    r - 10,                     // 土の水中重量
-                    r + 1,                      // 土の飽和重量
-                    r1.Next(1, 46),             // 内部摩擦角 1 ～ 45°
-                    r1.Next(0, 1000),           // 粘着力 0 ～ 1000
-                    0                          // 粘着力 増分 0
+                    param114,               // 平均N値 0 ～ 50
+                    param111,               // 土の湿潤重量
+                    param111 - 10,          // 土の水中重量
+                    param111 + 1,           // 土の飽和重量
+                    param115,               // 内部摩擦角 1 ～ 45°
+                    param116,               // 粘着力 0 ～ 1000
+                    0                       // 粘着力 増分 0
                     );
 
 
-                // 堤内区間 土質条件
-                r = r1.Next(11, 21);            // 土の湿潤重量 11 ～ 20
+                // 堤体区間 土質条件
                 editor_016.Edit(xmlDoc,
                     20,
-                    soil_en[r1.Next(0, 2)],     // 土質
-                    r1.Next(0, 51),             // 平均N値 0 ～ 50
-                    r,                          // 土の湿潤重量
-                    r - 10,                     // 土の水中重量
-                    r + 1,                      // 土の飽和重量
-                    r1.Next(1, 46),             // 内部摩擦角 1 ～ 45°
-                    r1.Next(0, 1000),           // 粘着力 0 ～ 1000
-                    0,                          // 粘着力 増分 0
-                    r1.Next(10, 2000) * 100       // 変形係数 1000 ～ 200000
+                    param102,       // 土質
+                    param103,       // 平均N値 0 ～ 50
+                    param101,       // 土の湿潤重量
+                    param101 - 10,  // 土の水中重量
+                    param101 + 1,   // 土の飽和重量
+                    param104,       // 内部摩擦角 1 ～ 45°
+                    param105,       // 粘着力 0 ～ 1000
+                    0,              // 粘着力 増分 0
+                    param106        // 変形係数 1000 ～ 200000
                     );
-
-                // 堤内区間地表面（現地盤）高G.L.
-                editor_017.Edit(xmlDoc, h_in);  
 
 
                 // 堤内区間 土質条件
                 editor_018.Edit(xmlDoc,
                     20,
-                    soil_en[r1.Next(0, 2)],     // 土質
-                    r1.Next(0, 51),             // 平均N値 0 ～ 50
-                    r,                          // 土の湿潤重量
-                    r - 10,                     // 土の水中重量
-                    r + 1,                      // 土の飽和重量
-                    r1.Next(0, 51),             // 内部摩擦角 0 ～ 50°
-                    r1.Next(0, 1000),           // 粘着力 0 ～ 1000
-                    0,                          // 粘着力 増分 0
-                    r1.Next(10, 2000) * 100       // 変形係数 1000 ～ 200000
+                    param102,       // 土質
+                    param103,       // 平均N値 0 ～ 50
+                    param101,       // 土の湿潤重量
+                    param101 - 10,  // 土の水中重量
+                    param101 + 1,   // 土の飽和重量
+                    param104,       // 内部摩擦角 1 ～ 45°
+                    param105,       // 粘着力 0 ～ 1000
+                    0,              // 粘着力 増分 0
+                    param106        // 変形係数 1000 ～ 200000
                     );
 
                 // 鋼矢板
                 // editor_019.Edit(xmlDoc, 0.45, 0.6);  // 有効率
 
                 // 使用する矢板
-                editor_020.Edit(xmlDoc, r1.Next(1, 6)); // 1～5
+                var param201 = r1.Next(1, 6);
+                editor_020.Edit(xmlDoc, param201); // 1～5
 
                 // 使用する材質
                 string[] _SY = new string[2] { "_SY295", "_SY390" };
-                editor_021.Edit(xmlDoc, _SY[r1.Next(0, 2)]);
+                var param202 = _SY[r1.Next(0, 2)];
+                editor_021.Edit(xmlDoc, param202);
 
                 // 根入れ照査時の地盤の評価
-                editor_022.Edit(xmlDoc, soil_en[r1.Next(0, 2)]);
+                editor_022.Edit(xmlDoc, param102);
 
                 // 矢板前面の無効層厚
-                editor_023.Edit(xmlDoc, r1.Next(0, 6)); // 0m ～ 5m
+                editor_023.Edit(xmlDoc, 0); // 0m
 
                 // 引張材材料特性
                 bool[] _bool = new bool[2] { true, false };
 
                 // 1段目
                 // 使用鋼材直径
-                var Dia1 = r1.Next(10, 51);
+                var param301 = r1.Next(10, 51);
+                                              // 
                 // 使用材料番号 
                 int[] _No;
-                if (Dia1 < 40)
+                if (param301 < 40)
                     _No = new int[2] { 1, 3 };
                 else
                     _No = new int[2] { 2, 4 };
                 // 腹起し材質   
                 string[] _WALE = new string[2] { "_SS400", "_SM490" };
-                // 使用材料番号   
-                var iNo = _No[r1.Next(0, 2)];
+                // 使用材料番号
+                var param302 = r1.Next(0, 2);
+                var iNo = _No[param302];
                 // 
                 var sNo = "SS400（＜40mm）";
                 switch (iNo)
@@ -193,28 +275,31 @@ namespace WindowsFormsApp1
                         break;
                 }
                 // 腹起し材質
-                var jNo = r1.Next(0, 2);
-                var w1 = _WALE[jNo];
+                var param303 = r1.Next(0, 2);
+                var w1 = _WALE[param303];
 
-                editor_024.Edit(xmlDoc, _bool[r1.Next(0, 2)],   // 引張バネ有効・無効
-                                        pich_10,                // 設置間隔
-                                        Dia1,
-                                        iNo,                     // 使用材料番号   
-                                        r1.Next(1, 6),          // 使用本数  1 ～ 5, 
+                var param304 = r1.Next(1, 6); // 使用本数  1 ～ 5,
+
+                editor_024.Edit(xmlDoc, false,                  // 引張バネ無効
+                                        param008,               // 設置間隔
+                                        param301,
+                                        iNo,                    // 使用材料番号   
+                                        param304,               // 使用本数  1 ～ 5, 
                                         false,                  // 引張材バネ直接入力 しない
                                         1,                      // バネ定数 
                                         w1,                     // 腹起し材質  
                                         sNo,
-                                        jNo + 1,
+                                        param303 + 1,
                                         w1.Replace("_", "")
                                         );
 
 
                 // 2段目
                 // 使用鋼材直径
-                Dia1 = r1.Next(10, 51);
+                var param311 = r1.Next(10, 51);
+
                 // 使用材料番号 
-                if (Dia1 < 40)
+                if (param311 < 40)
                     _No = new int[2] { 1, 3 };
                 else
                     _No = new int[2] { 2, 4 };
@@ -237,19 +322,21 @@ namespace WindowsFormsApp1
                         break;
                 }
                 // 腹起し材質  
-                jNo = r1.Next(0, 2);
-                w1 = _WALE[jNo];
+                //param303 = r1.Next(0, 2); // 1段目と同じ
+                //w1 = _WALE[param303];     // 1段目と同じ
 
-                editor_025.Edit(xmlDoc, _bool[r1.Next(0, 2)],   // 引張バネ有効・無効
-                                        pich_10,                // 設置間隔
-                                        Dia1,
+                var param314 = r1.Next(1, 6); // 使用本数  1 ～ 5,
+
+                editor_025.Edit(xmlDoc, false,                  // 引張バネ無効
+                                        param010,                // 設置間隔
+                                        param311,
                                         iNo,                     // 使用材料番号   
-                                        r1.Next(1, 6),          // 使用本数  1 ～ 5, 
+                                        param314,               // 使用本数  1 ～ 5, 
                                         false,                  // 引張材バネ直接入力 しない
                                         1,                      // バネ定数 
                                         w1,                     // 腹起し材質    
                                         sNo,
-                                        jNo + 1,
+                                        param303 + 1,
                                         w1.Replace("_", "")
                                         );
 
@@ -257,10 +344,20 @@ namespace WindowsFormsApp1
                 // editor_026.Edit(xmlDoc, "高水位時");
 
                 // 常時の水位
-                editor_027.Edit(xmlDoc,
-                    Convert.ToDouble(r1.Next(Convert.ToInt32(Math.Max(h_out, h_in)* 10), Convert.ToInt32(param004 * 10))) / 10,     // 堤外側水位 0m ～ 堤外側矢板天端高さ
-                    Convert.ToDouble(r1.Next(0, Convert.ToInt32(param003 * 10))) / 10      // 堤内側水位 0m ～ 堤内側矢板天端高さ
-                    );
+
+                // 堤外側水位 0m ～ 壁体高さ
+                var param401 = Convert.ToDouble(r1.Next(
+                    Convert.ToInt32(min_h10 * 10), 
+                    Convert.ToInt32(param003 * 10)
+                    )) / 10;
+                // 堤内側水位 0m ～ 壁体高さ
+                var param402 = Convert.ToDouble(r1.Next(
+                    0, 
+                    Convert.ToInt32(param003 * 10)
+                    )) / 10;
+
+                editor_027.Edit(xmlDoc,  param401, param402);
+
 
                 // 常時鉛直力
                 // editor_028.Edit(xmlDoc, 1.00000000000000E+000);
@@ -270,20 +367,88 @@ namespace WindowsFormsApp1
                 // editor_029.Edit(xmlDoc, "高水位時");
 
                 // 地震時の水位
-                editor_030.Edit(xmlDoc,
-                    Convert.ToDouble(r1.Next(Convert.ToInt32(Math.Max(h_out, h_in) * 10), Convert.ToInt32(param004 * 10))) / 10,     // 堤外側水位 0m ～ 堤外側矢板天端高さ
-                    Convert.ToDouble(r1.Next(0, Convert.ToInt32(param003 * 10))) / 10      // 堤内側水位 0m ～ 堤内側矢板天端高さ
-                    );
+
+                // 堤外側水位 0m ～ 壁体高さ
+                var param411 = Convert.ToDouble(r1.Next(
+                    Convert.ToInt32(min_h10 * 10),
+                    Convert.ToInt32(param003 * 10)
+                    )) / 10;
+
+                // 堤内側水位 0m ～ 壁体高さ
+                var param412 = Convert.ToDouble(r1.Next(
+                    0,
+                    Convert.ToInt32(param003 * 10)
+                    )) / 10;
+
+                editor_030.Edit(xmlDoc, param411, param412);
+
 
                 // 空気中における震度
-                editor_031.Edit(xmlDoc, Convert.ToDouble(r1.Next(1, 6)) / 10); // Kh = 0.1 ～ 0.5
+                var param501 = Convert.ToDouble(r1.Next(1, 6)) / 10;
+                editor_031.Edit(xmlDoc, param501); // Kh = 0.1 ～ 0.5
 
                 // 地震時鉛直力
                 // editor_032.Edit(xmlDoc, 1.00000000000000E+000);
 
                 string filename = string.Format("Z:/{0}.f7n", i);
                 xmlDoc.Save(filename);
+
+                // csvファイルに登録
+                this.csvList.Add(
+                    i.ToString() + ", " +
+                    param001.ToString() + ", " +
+                    param002.ToString() + ", " +
+                    param003.ToString() + ", " +
+                    param004.ToString() + ", " +
+                    param005.ToString() + ", " +
+                    param006.ToString() + ", " +
+                    param007.ToString() + ", " +
+
+                    // 引張材
+                    param008.ToString() + ", " +
+                    param009.ToString() + ", " +
+                    param010.ToString() + ", " +
+                    param011.ToString() + ", " +
+
+                    // 地層データ
+                    param101.ToString() + ", " +
+                    param102            + ", " +
+                    param103.ToString() + ", " +
+                    param104.ToString() + ", " +
+                    param105.ToString() + ", " +
+                    param106.ToString() + ", " +
+                    param111.ToString() + ", " +
+                    param112            + ", " +
+                    param113            + ", " +
+                    param114.ToString() + ", " +
+                    param115.ToString() + ", " +
+                    param116.ToString() + ", " +
+
+                    // 使用する矢板
+                    param201.ToString() + ", " +
+                    param202            + ", " +
+                    param301.ToString() + ", " +
+                    param302.ToString() + ", " +
+                    param303.ToString() + ", " +
+                    param304.ToString() + ", " +
+                    param311.ToString() + ", " +
+                    param314.ToString() + ", " +
+                    // 水位
+                    param401.ToString() + ", " +
+                    param402.ToString() + ", " +
+                    param411.ToString() + ", " +
+                    param412.ToString() + ", " +
+
+                    //震度
+                    param501.ToString()
+                );
+
             }
+
+
+            // リストの内容をファイル（CSV)に書き込む（上書き）
+            File.WriteAllLines(@"Z:/inputdata.csv", this.csvList, Encoding.GetEncoding("shift-jis"));
+
 
             Label1.Text = "完了しました。";
             MessageBox.Show("＼(^o^)／ｵﾜﾀ");

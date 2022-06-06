@@ -60,7 +60,7 @@ namespace WindowsFormsApp1
             var LandsideLWL = helper.getXmlElement(Case, "LandsideLWL");
             
 
-            LandsideLWL.InnerText = HWL.ToString("E");
+            LandsideLWL.InnerText = LWL.ToString("E");
 
         }
     }
