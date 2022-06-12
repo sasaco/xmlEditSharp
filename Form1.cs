@@ -74,9 +74,9 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             //コントロールを初期化する
-            ProgressBar1.Minimum = 0;
-            ProgressBar1.Maximum = 10000;
-            ProgressBar1.Value = 0;
+            ProgressBar1.Minimum = 10001;
+            ProgressBar1.Maximum = 20000;
+            ProgressBar1.Value = ProgressBar1.Minimum;
 
             var xmlDoc = new XmlDocument();
             for(int i = ProgressBar1.Minimum; i < ProgressBar1.Maximum+1; ++i)
