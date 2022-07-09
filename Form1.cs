@@ -46,8 +46,8 @@ namespace WindowsFormsApp1
                 "在来地盤変形係数, " +  // param106
 
                 "中詰め重量, " +        // param111
-                "中詰め区分ja, " +      // param112
-//                "中詰め区分, " +      // param113
+                //"中詰め区分ja, " +    // param112
+                "中詰め区分, " +        // param113
                 "中詰めN値, " +         // param114
                 "中詰め摩擦角, " +      // param115
                 "中詰め粘着力, " +      // param116
@@ -434,8 +434,8 @@ namespace WindowsFormsApp1
                     param106.ToString() + ", " +
 
                     param111.ToString() + ", " +
-                    param112            + ", " +
-                    //param113            + ", " +
+                    //param112            + ", " +
+                    param113            + ", " +
                     param114.ToString() + ", " +
                     param115.ToString() + ", " +
                     param116.ToString() + ", " +
