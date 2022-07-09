@@ -32,8 +32,8 @@ namespace WindowsFormsApp1
                 "堤内区間地表面, " +    // param007
 
                 // 引張材
-                "上段引張材間隔, " +    // param008
-                "上段引張材位置, " +    // param009
+                "引張材間隔, " +        // param008
+                "引張材位置, " +        // param009
                 //"param010, " +
                 //"param011, " +
 
