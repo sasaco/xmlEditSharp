@@ -135,7 +135,8 @@ namespace WindowsFormsApp1
                 // 引張材
                 var min_h10 = Math.Max(param006, param007);
                 // 1段目
-                var param008 = Convert.ToDouble(r1.Next(2, param001 * 5 + 1)) / 10;     // 上段ピッチ 0.2m～堤体延長/2
+                double[] ctc = new double[2] { 0.8, 1.6 };
+                var param008 = ctc[r1.Next(0, 2)];                                      // 上段ピッチ 0.8m or 1.6m
                 var param009 = Convert.ToDouble(r1.Next(                                // 地表面（現地盤）+ 0.2m ～ 矢板天端高さ - 0.2
                     Convert.ToInt32((min_h10 + 0.2) * 10), 
                     Convert.ToInt32((param005 - 0.2) * 10)
