@@ -73,6 +73,7 @@
     <Compile Include="editor_class\029_検討ケース_地震時_ケース名変更.cs" />
     <Compile Include="editor_class\030_検討ケース_地震時_水位条件変更.cs" />
     <Compile Include="editor_class\031_検討ケース_地震時_地震の条件変更.cs" />
+    <Compile Include="editor_class\035_検討ケース_腹起し.cs" />
     <Compile Include="editor_class\032_検討ケース_地震時_鉛直力変更.cs" />
     <Compile Include="editor_class\editor_helper.cs" />
     <Compile Include="Form1.cs">
