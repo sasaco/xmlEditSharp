@@ -81,8 +81,8 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             //コントロールを初期化する
-            ProgressBar1.Minimum = 20001;
-            ProgressBar1.Maximum = 30000;
+            ProgressBar1.Minimum = 0;
+            ProgressBar1.Maximum = 99999;
             ProgressBar1.Value = ProgressBar1.Minimum;
 
             var xmlDoc = new XmlDocument();
@@ -119,12 +119,12 @@ namespace WindowsFormsApp1
                 // 堤外区間地表面（現地盤）高G.L.
                 var param006 = Convert.ToDouble(r1.Next(0, Math.Max(Convert.ToInt32((param005 / 2) * 10), 0))) / 10;  // 0m ～ 中詰土天端高さの1/2
                 // 堤内区間地表面（現地盤）高G.L.
-                var param007 = Convert.ToDouble(r1.Next(0, Math.Max(Convert.ToInt32((param005 / 2) * 10), 0))) / 10;  // 0m ～ 中詰土天端高さの1/2
-                // どっちかは、0m にする
-                if (r1.Next(0, 2) == 0)
-                    param006 = 0; // Convert.ToDouble(r1.Next(0, Convert.ToInt32(param005 * 3))) / 10;
-                else
-                    param007 = 0; // Convert.ToDouble(r1.Next(0, Convert.ToInt32(param005 * 3))) / 10;
+                var param007 = 0;// Convert.ToDouble(r1.Next(0, Math.Max(Convert.ToInt32((param005 / 2) * 10), 0))) / 10;  // 0m ～ 中詰土天端高さの1/2
+                //// どっちかは、0m にする
+                //if (r1.Next(0, 2) == 0)
+                //    param006 = 0; // Convert.ToDouble(r1.Next(0, Convert.ToInt32(param005 * 3))) / 10;
+                //else
+                //    param007 = 0; // Convert.ToDouble(r1.Next(0, Convert.ToInt32(param005 * 3))) / 10;
 
                 // 堤外区間地表面（現地盤）高G.L.
                 editor_012.Edit(xmlDoc, param006);
@@ -156,14 +156,18 @@ namespace WindowsFormsApp1
                 // 地層データ
                 string[] soil_jp = new string[2] { "粘性土", "砂質土" };
                 string[] soil_en = new string[2] { "_Clay", "_Sandy" };
+                int soil_index1 = r1.Next(0, 2); // 地質区分のid
+                int N1 = r1.Next(0, 51);
                 // 堤外区間 土質条件
                 int param101 = r1.Next(11, 21);         // 土の湿潤重量 11 ～ 20
-                var param102 = soil_en[r1.Next(0, 2)];  // 土質
-                var param103 = r1.Next(0, 51);          // 平均N値 0 ～ 50
-                var param104 = r1.Next(1, 46);          // 内部摩擦角 1 ～ 45°
-                var param105 = r1.Next(0, 300);         // 粘着力 0 ～ 300
-                var param106 = r1.Next(10, 2000) * 100; // 変形係数 1000 ～ 200000
+                var param102 = soil_en[soil_index1];    // 土質
+                var param103 = N1;                                          // 平均N値 0 ～ 50
+                var param104 = (soil_index1 == 1) ? this.getφ(N1) : 15;     // 内部摩擦角 1 ～ 45°
+                var param105 = (soil_index1 == 0) ? this.getC(N1) : 0;      // 粘着力 0 ～ 300
+                var param106 = this.getE(N1);                               // 変形係数 1000 ～ 200000
 
+
+                
                 editor_013.Edit(xmlDoc,
                     20,             // 層厚 20m(固定
                     param102,       // 土質
@@ -181,18 +185,19 @@ namespace WindowsFormsApp1
                 editor_014.Edit(xmlDoc, 0);  // 中詰土端高さ = 0m
 
                 // 中詰め 土質条件
-                int soil_index = r1.Next(0, 2);
+                int soil_index2 = r1.Next(0, 2); // 地質区分のid
+                int N2 = r1.Next(0, 51);
 
                 int param111 = r1.Next(11, 21);             // 土の湿潤重量 11 ～ 20
-                var param112 = soil_jp[soil_index];         // 土質
-                var param113 = soil_en[soil_index];         // 土質
-                var param114 = r1.Next(0, 51);              // 平均N値 0 ～ 50
-                var param115 = r1.Next(1, 46);              // 内部摩擦角 1 ～ 45°
-                var param116 = r1.Next(0, 300);             // 粘着力 0 ～ 300
+                var param112 = soil_jp[soil_index2];         // 土質
+                var param113 = soil_en[soil_index2];         // 土質
+                var param114 = N2;              // 平均N値 0 ～ 50
+                var param115 = (soil_index2 == 1) ? this.getφ(N2) : 15;     // 内部摩擦角 1 ～ 45°
+                var param116 = (soil_index2 == 0) ? this.getC(N2) : 0;      // 粘着力 0 ～ 3000
 
                 editor_015.Edit(xmlDoc,
-                    soil_jp[soil_index],
-                    soil_en[soil_index],
+                    soil_jp[soil_index2],
+                    soil_en[soil_index2],
                     param114,               // 平均N値 0 ～ 50
                     param111,               // 土の湿潤重量
                     param111 - 10,          // 土の水中重量
@@ -399,7 +404,7 @@ namespace WindowsFormsApp1
 
 
                 // 空気中における震度
-                var param501 = Convert.ToDouble(r1.Next(1, 6)) / 10;
+                var param501 = 0.1;//  Convert.ToDouble(r1.Next(1, 6)) / 10;
                 editor_031.Edit(xmlDoc, param501); // Kh = 0.1 ～ 0.5
 
                 // 地震時鉛直力
@@ -476,5 +481,55 @@ namespace WindowsFormsApp1
             MessageBox.Show("＼(^o^)／ｵﾜﾀ");
         }
 
+        private int getφ(int N)
+        {
+            if (N == 0)
+            {
+                return 15;
+            }
+            else
+            {
+                var f = Convert.ToInt32(Math.Sqrt(15 * N) + 15);
+                return Math.Min(f, 45);
+            }
+        }
+
+        private int getC(int N)
+        {
+            int result = 200;
+            if (N <= 2)
+            {
+                result=  6 * N;
+            }
+            else if (N <= 4)
+            {
+                result = 13/2 * N - 1;
+            }
+            else if (N <= 8)
+            {
+                result = 25 / 4  * N;
+
+            }
+            else if (N <= 15)
+            {
+                result = 50 / 7 * N - (50 / 7);
+
+            }
+            else if (N <= 30)
+            {
+                result = 20 / 3 * N;
+            }
+
+            return result;
+            //Random r1 = new System.Random();
+            //return r1.Next(0, 300);
+        }
+
+        private int getE(int N)
+        {
+            return Convert.ToInt32(2800 * N);
+            //Random r1 = new System.Random();
+            //return r1.Next(10, 2000) * 100;
+        }
     }
 }
