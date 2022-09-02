@@ -32,8 +32,8 @@ namespace WindowsFormsApp1
 
             while (i < ProgressBar1.Maximum)
             {
-
                 var csvList = getList();
+                i++;
                 int Minimum = i;
 
                 for (int j = 0; j < 10000; j++)
@@ -108,7 +108,7 @@ namespace WindowsFormsApp1
                     int param101 = r1.Next(11, 21);         // 土の湿潤重量 11 ～ 20
                     var param102 = soil_en[soil_index1];    // 土質
                     var param103 = N1;                                          // 平均N値 0 ～ 50
-                    var param104 = (soil_index1 == 1) ? this.getφ(N1) : 15;     // 内部摩擦角 1 ～ 45°
+                    var param104 = (soil_index1 == 1) ? this.getφ(N1) : 5;     // 内部摩擦角 1 ～ 45°
                     var param105 = (soil_index1 == 0) ? this.getC(N1) : 0;      // 粘着力 0 ～ 300
                     var param106 = this.getE(N1);                               // 変形係数 1000 ～ 200000
 
@@ -138,7 +138,7 @@ namespace WindowsFormsApp1
                     var param112 = soil_jp[soil_index2];         // 土質
                     var param113 = soil_en[soil_index2];         // 土質
                     var param114 = N2;              // 平均N値 0 ～ 50
-                    var param115 = (soil_index2 == 1) ? this.getφ(N2) : 15;     // 内部摩擦角 1 ～ 45°
+                    var param115 = (soil_index2 == 1) ? this.getφ(N2) : 5;     // 内部摩擦角 1 ～ 45°
                     var param116 = (soil_index2 == 0) ? this.getC(N2) : 0;      // 粘着力 0 ～ 3000
 
                     editor_015.Edit(xmlDoc,
@@ -431,15 +431,8 @@ namespace WindowsFormsApp1
 
         private int getφ(int N)
         {
-            if (N == 0)
-            {
-                return 15;
-            }
-            else
-            {
-                var f = Convert.ToInt32(Math.Sqrt(15 * N) + 15);
-                return Math.Min(f, 45);
-            }
+            var f = Convert.ToInt32(Math.Sqrt(15 * N) + 15);
+            return Math.Max(15, Math.Min(f, 45));
         }
 
         private int getC(int N)
