@@ -22,7 +22,7 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             //コントロールを初期化する
-            ProgressBar1.Minimum = 0;
+            ProgressBar1.Minimum = 1;
             ProgressBar1.Maximum = 100000;
             ProgressBar1.Value = ProgressBar1.Minimum;
 
@@ -33,12 +33,10 @@ namespace WindowsFormsApp1
             while (i < ProgressBar1.Maximum)
             {
                 var csvList = getList();
-                i++;
                 int Minimum = i;
 
                 for (int j = 0; j < 10000; j++)
                 {
-                    i++;
                     ProgressBar1.Value = i;
                     Label1.Text = string.Format("データ生成中{0}/{1}", ProgressBar1.Value + 1, ProgressBar1.Maximum);
 
@@ -414,10 +412,10 @@ namespace WindowsFormsApp1
                         //震度
                         param501.ToString()
                     );
-
+                    i++;
                 }
 
-                int Maximum = i;
+                int Maximum = i - 1;
 
                 // リストの内容をファイル（CSV)に書き込む（上書き）
                 var csvFileName = string.Format("Z:/csv/input{0}-{1}.csv", Minimum, Maximum);
